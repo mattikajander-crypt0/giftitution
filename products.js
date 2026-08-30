@@ -1,10 +1,9 @@
-const products = [
   {
-    name: "Botanical Garden",
-    category: "Floral wrapping paper",
-    description: "A beautiful botanical wrapping paper with an elegant floral feel.",
+    name: "Building Blocks Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A playful building-block design that makes birthdays and kids' gifts even more fun.",
     image: "",
-    amazon: "#"
+    amazon: "https://www.amazon.com/BIOBROWN-Reversible-Building-Blocks-Wrapping/dp/B0DSD4CCGK?th=1&linkCode=ll2&tag=giftitution-20&linkId=d33724c879c722491cd7364ca927e3ba&language=en_US&gaOptInStatus=false&optOutTS=1788087758654&ref_=as_li_ss_tl"
   },
   {
     name: "Vintage Rose",
