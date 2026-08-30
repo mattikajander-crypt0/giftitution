@@ -94,14 +94,14 @@ const products = [
     name: "Baseball Birthday Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A reversible baseball design made for birthdays and sports-loving kids.",
-    image: "https://m.media-amazon.com/images/P/B0H1MRBT9H.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/717nrQW71ML._AC_SL1500_.jpg",
     amazon: "https://amzn.to/3T5quoi"
   },
   {
     name: "Reversible Birthday Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A colorful reversible birthday design for cheerful kids' presents.",
-    image: "https://m.media-amazon.com/images/P/B0GTRK2JXG.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/81rR0U7+nqL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4wV7eb6"
   },
   {
