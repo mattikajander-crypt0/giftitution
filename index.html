@@ -48,18 +48,26 @@ footer{display:flex;justify-content:space-between;padding:28px 6vw;border-top:1p
 
 <footer><div>🎀 Giftitution</div><div>© 2026 Giftitution</div></footer>
 
+<script src="products.js"></script>
+
 <script>
-const products=[
-"Botanical Garden","Vintage Rose","Wildflower Meadow","English Garden","Watercolor Blooms",
-"Pressed Flowers","Meadow Green","Peony Garden","Wild Rose","Sage Botanicals",
-"Ditsy Floral","Dark Botanical","Blush Flowers","Golden Botanicals","Country Garden",
-"Minimal Botanicals","Eucalyptus Bloom","Rose & Ribbon","Winter Florals","Modern Flower Press"
-];
-document.getElementById("products").innerHTML=products.map((name,i)=>`
-<article class="card"><div class="pic"><span class="num">${i+1}</span><span class="placeholder">Product image</span></div>
-<div class="info"><div class="cat">Floral wrapping paper</div><h3>${name}</h3>
-<p>A beautiful wrapping option selected for its elegant, gift-shop feel.</p>
-<a class="link" href="#" target="_blank" rel="sponsored noopener">View product →</a></div></article>`).join("");
+document.getElementById("products").innerHTML = products.map((product, i) => `
+<article class="card">
+  <div class="pic">
+    <span class="num">${i + 1}</span>
+    <span class="placeholder">Product image</span>
+  </div>
+
+  <div class="info">
+    <div class="cat">${product.category}</div>
+    <h3>${product.name}</h3>
+    <p>${product.description}</p>
+    <a class="link" href="${product.amazon}" target="_blank" rel="sponsored noopener">
+      View product →
+    </a>
+  </div>
+</article>
+`).join("");
 </script>
 </body>
 </html>
