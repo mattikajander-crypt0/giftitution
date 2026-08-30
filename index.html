@@ -5,78 +5,342 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Beautiful gift ideas, wrapping inspiration and thoughtful finds.">
 <title>Giftitution — Find Gifts They'll Love</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;color:#172a35;background:#fffdf9;font-family:Georgia,"Times New Roman",serif;line-height:1.5}
-header{min-height:70px;padding:16px 6vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e7ddd2}
-header a{color:#172a35;text-decoration:none}.brand{font-size:1.35rem;font-weight:bold}nav{display:flex;gap:22px;font:14px Arial,sans-serif}
-.hero{padding:90px 7vw 100px;text-align:center;background:linear-gradient(135deg,#f7f2eb,#edf1e9,#f5e4dc)}
-.eyebrow{color:#b86f67;font:700 11px Arial,sans-serif;letter-spacing:.16em}
-h1{font-size:clamp(3.2rem,9vw,6.5rem);line-height:.95;letter-spacing:-.04em;margin:12px 0}
-h1 em{color:#b86f67;font-weight:400}.hero p:not(.eyebrow){max-width:560px;margin:25px auto;color:#66737a;font:16px Arial,sans-serif}
-.button{display:inline-block;padding:14px 25px;border-radius:999px;background:#172a35;color:white;text-decoration:none;font:700 14px Arial,sans-serif}
-.section{padding:80px 5vw}.heading{text-align:center;max-width:760px;margin:0 auto 42px}
-.heading h2,.about h2{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin:8px 0 14px}
-.heading p:last-child,.about p:last-child{color:#66737a;font:15px Arial,sans-serif}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:1300px;margin:auto}
-.card{overflow:hidden;border:1px solid #e7ddd2;border-radius:18px;background:#fff;transition:.2s}.card:hover{transform:translateY(-3px)}
-.pic{position:relative;aspect-ratio:4/5;background:#f3eee7;overflow:hidden}
-.pic img{width:100%;height:100%;object-fit:cover;display:block}
-.num{position:absolute;z-index:2;top:12px;left:12px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#b86f67;color:white;font:700 14px Arial,sans-serif}
-.info{padding:18px}.cat{color:#b86f67;font:700 10px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-.info h3{margin:5px 0 8px;font-size:1.25rem}.info p{color:#66737a;font:13px Arial,sans-serif}
-.link{color:#172a35;font:700 13px Arial,sans-serif;text-decoration:none}
-.about{padding:80px 10vw;text-align:center;background:#f7f2eb}.about p:last-child{max-width:700px;margin:25px auto}
-footer{display:flex;justify-content:space-between;padding:28px 6vw;border-top:1px solid #e7ddd2;color:#66737a;font:12px Arial,sans-serif}
-@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){nav{gap:10px;font-size:12px}.hero{padding:70px 6vw 80px}.section{padding:60px 5vw}.grid{grid-template-columns:1fr}.pic{aspect-ratio:16/10}footer{flex-direction:column;gap:8px}}
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  color:#172a35;
+  background:#fffdf9;
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.5
+}
+
+header{
+  min-height:70px;
+  padding:16px 6vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #e7ddd2
+}
+
+header a{
+  color:#172a35;
+  text-decoration:none
+}
+
+.brand{
+  font-size:1.35rem;
+  font-weight:bold
+}
+
+nav{
+  display:flex;
+  gap:22px;
+  font:14px Arial,sans-serif
+}
+
+.hero{
+  padding:90px 7vw 100px;
+  text-align:center;
+  background:linear-gradient(135deg,#f7f2eb,#edf1e9,#f5e4dc)
+}
+
+.eyebrow{
+  color:#b86f67;
+  font:700 11px Arial,sans-serif;
+  letter-spacing:.16em
+}
+
+h1{
+  font-size:clamp(3.2rem,9vw,6.5rem);
+  line-height:.95;
+  letter-spacing:-.04em;
+  margin:12px 0
+}
+
+h1 em{
+  color:#b86f67;
+  font-weight:400
+}
+
+.hero p:not(.eyebrow){
+  max-width:560px;
+  margin:25px auto;
+  color:#66737a;
+  font:16px Arial,sans-serif
+}
+
+.button{
+  display:inline-block;
+  padding:14px 25px;
+  border-radius:999px;
+  background:#172a35;
+  color:white;
+  text-decoration:none;
+  font:700 14px Arial,sans-serif
+}
+
+.section{
+  padding:80px 5vw
+}
+
+.heading{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 42px
+}
+
+.heading h2,
+.about h2{
+  font-size:clamp(2rem,5vw,3.6rem);
+  line-height:1.05;
+  margin:8px 0 14px
+}
+
+.heading p:last-child,
+.about p:last-child{
+  color:#66737a;
+  font:15px Arial,sans-serif
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  max-width:1300px;
+  margin:auto
+}
+
+.card{
+  overflow:hidden;
+  border:1px solid #e7ddd2;
+  border-radius:18px;
+  background:#fff;
+  transition:.2s
+}
+
+.card:hover{
+  transform:translateY(-3px)
+}
+
+.pic{
+  position:relative;
+  aspect-ratio:4/5;
+  background:#f3eee7;
+  overflow:hidden
+}
+
+.pic img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block
+}
+
+.num{
+  position:absolute;
+  z-index:2;
+  top:12px;
+  left:12px;
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#b86f67;
+  color:white;
+  font:700 14px Arial,sans-serif
+}
+
+.info{
+  padding:18px
+}
+
+.cat{
+  color:#b86f67;
+  font:700 10px Arial,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+
+.info h3{
+  margin:5px 0 8px;
+  font-size:1.25rem
+}
+
+.info p{
+  color:#66737a;
+  font:13px Arial,sans-serif
+}
+
+.link{
+  color:#172a35;
+  font:700 13px Arial,sans-serif;
+  text-decoration:none
+}
+
+.about{
+  padding:80px 10vw;
+  text-align:center;
+  background:#f7f2eb
+}
+
+.about p:last-child{
+  max-width:700px;
+  margin:25px auto
+}
+
+footer{
+  display:flex;
+  justify-content:space-between;
+  padding:28px 6vw;
+  border-top:1px solid #e7ddd2;
+  color:#66737a;
+  font:12px Arial,sans-serif
+}
+
+@media(max-width:950px){
+  .grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+}
+
+@media(max-width:600px){
+  nav{
+    gap:10px;
+    font-size:12px
+  }
+
+  .hero{
+    padding:70px 6vw 80px
+  }
+
+  .section{
+    padding:60px 5vw
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
+  .pic{
+    aspect-ratio:16/10
+  }
+
+  footer{
+    flex-direction:column;
+    gap:8px
+  }
+}
 </style>
 </head>
+
 <body>
-<header><a class="brand" href="/">🎀 Giftitution</a><nav><a href="#collections">Collections</a><a href="#about">About</a></nav></header>
+
+<header>
+  <a class="brand" href="/">🎀 Giftitution</a>
+  <nav>
+    <a href="#collections">Collections</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
 <section class="hero">
-<p class="eyebrow">BEAUTIFUL FINDS • THOUGHTFUL GIFTS</p>
-<h1>Find gifts<br><em>they'll love.</em></h1>
-<p>Carefully selected gift ideas, wrapping inspiration and beautiful little finds.</p>
-<a class="button" href="#collections">Explore ideas</a>
+  <p class="eyebrow">BEAUTIFUL FINDS • THOUGHTFUL GIFTS</p>
+
+  <h1>
+    Find gifts<br>
+    <em>they'll love.</em>
+  </h1>
+
+  <p>
+    Carefully selected gift ideas, wrapping inspiration and beautiful little finds.
+  </p>
+
+  <a class="button" href="#collections">Explore ideas</a>
 </section>
 
 <section id="collections" class="section">
-<div class="heading">
-  <p class="eyebrow">THE KIDS COLLECTION</p>
-  <h2>20 Fun Gift Wrapping Papers for Kids</h2>
-  <p>Playful wrapping paper for birthdays, celebrations and little surprises.</p>
-</div>
-<div class="grid" id="products"></div>
+
+  <div class="heading">
+    <p class="eyebrow">THE KIDS COLLECTION</p>
+
+    <h2>20 Fun Gift Wrapping Papers for Kids</h2>
+
+    <p>
+      Playful wrapping paper for birthdays, celebrations and little surprises.
+    </p>
+  </div>
+
+  <div class="grid" id="products"></div>
+
 </section>
 
 <section id="about" class="about">
-<p class="eyebrow">ABOUT GIFTITUTION</p>
-<h2>Beautiful ideas, without the endless searching.</h2>
-<p>Giftitution curates products and ideas we think are worth discovering.
-Some links on this site are affiliate links, which means we may earn a commission
-if you make a purchase through them, at no extra cost to you.</p>
-<p><strong>As an Amazon Associate I earn from qualifying purchases.</strong></p>
+
+  <p class="eyebrow">ABOUT GIFTITUTION</p>
+
+  <h2>Beautiful ideas, without the endless searching.</h2>
+
+  <p>
+    Giftitution curates products and ideas we think are worth discovering.
+    Some links on this site are affiliate links, which means we may earn a commission
+    if you make a purchase through them, at no extra cost to you.
+  </p>
+
+  <p>
+    <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
+  </p>
+
 </section>
 
-<footer><div>🎀 Giftitution</div><div>© 2026 Giftitution</div></footer>
+<footer>
+  <div>🎀 Giftitution</div>
+  <div>© 2026 Giftitution</div>
+</footer>
 
 <script src="products.js"></script>
+
 <script>
 document.getElementById("products").innerHTML = products.map((product, i) => `
-<article class="card">
-  <div class="pic">
-    <span class="num">${i + 1}</span>
-    <img src="${product.image}" alt="${product.name}" loading="lazy"
-         onerror="this.style.display='none'">
-  </div>
-  <div class="info">
-    <div class="cat">${product.category}</div>
-    <h3>${product.name}</h3>
-    <p>${product.description}</p>
-    <a class="link" href="${product.amazon}" target="_blank" rel="sponsored noopener">View product →</a>
-  </div>
-</article>
+  <article class="card">
+
+    <div class="pic">
+      <span class="num">${i + 1}</span>
+
+      <img
+        src="${product.image}"
+        alt="${product.name}"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+    </div>
+
+    <div class="info">
+
+      <div class="cat">${product.category}</div>
+
+      <h3>${product.name}</h3>
+
+      <p>${product.description}</p>
+
+      <a
+        class="link"
+        href="${product.amazon}"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+        View product →
+      </a>
+
+    </div>
+
+  </article>
 `).join("");
 </script>
+
 </body>
 </html>
