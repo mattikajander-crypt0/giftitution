@@ -1,141 +1,142 @@
+const products = [
+  {
+    name: "Minecraft Reversible Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A fun Minecraft-inspired wrapping paper for birthdays, holidays and gaming fans.",
+    image: "",
+    amazon: "https://amzn.to/4zMm1HM"
+  },
+  {
+    name: "Reversible Kids' Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A colorful reversible design that brings extra fun to children's gifts.",
+    image: "",
+    amazon: "https://amzn.to/4i2lk6P"
+  },
   {
     name: "Building Blocks Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A playful building-block design that makes birthdays and kids' gifts even more fun.",
     image: "",
-    amazon: "https://www.amazon.com/BIOBROWN-Reversible-Building-Blocks-Wrapping/dp/B0DSD4CCGK?th=1&linkCode=ll2&tag=giftitution-20&linkId=d33724c879c722491cd7364ca927e3ba&language=en_US&gaOptInStatus=false&optOutTS=1788087758654&ref_=as_li_ss_tl"
+    amazon: "https://amzn.to/45Xqolz"
   },
   {
-    name: "Vintage Rose",
-    category: "Floral wrapping paper",
-    description: "A romantic vintage rose design for beautifully wrapped gifts.",
+    name: "Baby Shower Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A sweet baby-themed design for welcoming a new little one.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/3SIutXR"
   },
   {
-    name: "Wildflower Meadow",
-    category: "Floral wrapping paper",
-    description: "A delicate wildflower-inspired design for thoughtful gifts.",
+    name: "Dinosaur Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A playful dinosaur design that's perfect for children's birthday gifts.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4zNfoVo"
   },
   {
-    name: "English Garden",
-    category: "Floral wrapping paper",
-    description: "An elegant garden-inspired wrapping paper with timeless charm.",
+    name: "Kraft Kids' Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A simple kraft-style option for creative and playful gift wrapping.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4wT5I9v"
   },
   {
-    name: "Watercolor Blooms",
-    category: "Floral wrapping paper",
-    description: "Soft watercolor flowers that give any gift a beautiful finish.",
+    name: "Spider Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A fun spider-themed design made for exciting birthday surprises.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4cjpsvu"
   },
   {
-    name: "Pressed Flowers",
-    category: "Floral wrapping paper",
-    description: "A delicate pressed-flower style for a refined gift presentation.",
+    name: "Dinosaur Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "Another colorful dinosaur option for little adventurers and birthday celebrations.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4qLqE0E"
   },
   {
-    name: "Meadow Green",
-    category: "Floral wrapping paper",
-    description: "A fresh botanical design inspired by a green summer meadow.",
+    name: "Animal Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A cheerful animal design for birthdays and special children's gifts.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/3SnpITw"
   },
   {
-    name: "Peony Garden",
-    category: "Floral wrapping paper",
-    description: "A soft peony design for elegant and memorable presents.",
+    name: "Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A colorful birthday design for making children's presents feel extra special.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4i3d6LI"
   },
   {
-    name: "Wild Rose",
-    category: "Floral wrapping paper",
-    description: "A charming wild rose pattern with a timeless floral character.",
+    name: "Fun Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A bright and playful choice for birthday celebrations.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4hX38LM"
   },
   {
-    name: "Sage Botanicals",
-    category: "Floral wrapping paper",
-    description: "A calming botanical design in soft natural tones.",
+    name: "Disney Mickey Mouse Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A classic Disney favorite for children's birthdays and celebrations.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/45WS1eE"
   },
   {
-    name: "Ditsy Floral",
-    category: "Floral wrapping paper",
-    description: "A playful small-flower pattern for cheerful gift wrapping.",
+    name: "Baseball Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A sporty baseball design for young fans and active kids.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4gsDGN8"
   },
   {
-    name: "Dark Botanical",
-    category: "Floral wrapping paper",
-    description: "A sophisticated botanical design with a darker, dramatic feel.",
+    name: "Baseball Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A baseball-themed birthday design for sports-loving kids.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/3T5quoi"
   },
   {
-    name: "Blush Flowers",
-    category: "Floral wrapping paper",
-    description: "Soft blush florals for a beautiful and romantic gift.",
+    name: "Reversible Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A playful reversible design that gives you two looks in one.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4wV7eb6"
   },
   {
-    name: "Golden Botanicals",
-    category: "Floral wrapping paper",
-    description: "An elegant botanical pattern with a subtle luxurious character.",
+    name: "Hallmark Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A cheerful Hallmark option for colorful birthday celebrations.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4y57MvR"
   },
   {
-    name: "Country Garden",
-    category: "Floral wrapping paper",
-    description: "A charming country-garden inspired design for thoughtful presents.",
+    name: "Kids' Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A fun birthday design selected for children's celebrations.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4yfoBoe"
   },
   {
-    name: "Minimal Botanicals",
-    category: "Floral wrapping paper",
-    description: "A clean and understated botanical design with modern appeal.",
+    name: "Jumbo Birthday Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A jumbo-format option for wrapping larger birthday presents.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4gYmcbs"
   },
   {
-    name: "Eucalyptus Bloom",
-    category: "Floral wrapping paper",
-    description: "A fresh eucalyptus-inspired design in soothing natural tones.",
+    name: "Kids' Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A playful wrapping option for children's gifts and celebrations.",
     image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/4gGHbOU"
   },
   {
-    name: "Rose & Ribbon",
-    category: "Floral wrapping paper",
-    description: "A classic romantic design inspired by roses and gift ribbons.",
+    name: "Disney Princess Wrapping Paper",
+    category: "Kids' Gift Wrapping",
+    description: "A magical princess-themed design for birthdays and special surprises.",
     image: "",
-    amazon: "#"
-  },
-  {
-    name: "Winter Florals",
-    category: "Floral wrapping paper",
-    description: "A beautiful floral design suited to elegant seasonal gifting.",
-    image: "",
-    amazon: "#"
-  },
-  {
-    name: "Modern Flower Press",
-    category: "Floral wrapping paper",
-    description: "A contemporary floral design for stylish modern gift wrapping.",
-    image: "",
-    amazon: "#"
+    amazon: "https://amzn.to/3ULVKJr"
   }
 ];
