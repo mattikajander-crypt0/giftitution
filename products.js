@@ -31,35 +31,35 @@ const products = [
     name: "Dinosaur Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A fun dinosaur design for birthdays and adventurous little gift recipients.",
-    image: "https://m.media-amazon.com/images/P/B0DSKWFHDM.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/71DClubnrQL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4zNfoVo"
   },
   {
     name: "Kraft Kids' Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A playful kraft-paper birthday design for kids' presents and celebrations.",
-    image: "https://m.media-amazon.com/images/P/B0BLSML9G3.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/517Ur4fma-L._AC_.jpg",
     amazon: "https://amzn.to/4wT5I9v"
   },
   {
     name: "Spider Birthday Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A fun spider-themed design for superhero-style birthdays and kids' gifts.",
-    image: "https://m.media-amazon.com/images/P/B0F21Q91RK.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/81dO8CQ7gwL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4cjpsvu"
   },
   {
     name: "Dinosaur Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "Another colorful dinosaur option for birthdays, parties and little surprises.",
-    image: "https://m.media-amazon.com/images/P/B0GTTPKYK1.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/515BV4t-EXL.jpg",
     amazon: "https://amzn.to/4qLqE0E"
   },
   {
     name: "Animal Birthday Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A cheerful reversible animal design for birthdays and kids' celebrations.",
-    image: "https://m.media-amazon.com/images/P/B0FN7VB269.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/81vtQZ8+CjL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/3SnpITw"
   },
   {
@@ -73,7 +73,7 @@ const products = [
     name: "Birthday Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A colorful birthday wrapping option selected for fun, cheerful gift giving.",
-    image: "https://m.media-amazon.com/images/P/B0H6F1ZX4X.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/917Rkq8Q-tL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4hX38LM"
   },
   {
@@ -87,7 +87,7 @@ const products = [
     name: "Baseball Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A baseball-themed wrapping paper for young sports fans and birthday gifts.",
-    image: "https://m.media-amazon.com/images/P/B0F1K3C24S.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/51ljltLjl7L.jpg",
     amazon: "https://amzn.to/4gsDGN8"
   },
   {
@@ -108,7 +108,7 @@ const products = [
     name: "Hallmark Birthday Wrapping Paper Rolls",
     category: "Kids' Gift Wrapping",
     description: "A set of Hallmark birthday wrapping paper rolls for colorful celebrations.",
-    image: "https://m.media-amazon.com/images/P/B091MLGG9F.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/814m-BhcmKL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4y57MvR"
   },
   {
@@ -122,7 +122,7 @@ const products = [
     name: "Jumbo Reversible Birthday Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A jumbo reversible birthday wrapping option for bigger gifts and cheerful celebrations.",
-    image: "https://m.media-amazon.com/images/P/B0DKNVD1HG.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/71ewu215vXL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4gYmcbs"
   },
   {
