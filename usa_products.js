@@ -4,7 +4,7 @@ const products = [
     name: "Vintage American Flag Wall Decor",
     category: "Home & Decor",
     description: "Vintage-style American flag wall art that adds a classic patriotic touch to a living room, office or entryway.",
-    image: "https://m.media-amazon.com/images/P/B075CJ6QY2.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/419CSWXbVlL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4zKTfXQ"
   },
 
@@ -12,7 +12,7 @@ const products = [
     name: "American Flag Patchwork Pillow",
     category: "Home & Decor",
     description: "A farmhouse-style American flag accent pillow for sofas, chairs and patriotic home decorating.",
-    image: "https://m.media-amazon.com/images/P/B0973Y5SJH.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/41wpJjWdQvL.jpg",
     amazon: "https://amzn.to/3Usy395"
   },
 
@@ -20,7 +20,7 @@ const products = [
     name: "Stars & Stripes Throw Blanket",
     category: "Home & Decor",
     description: "A cozy Stars and Stripes throw that brings an unmistakably American accent to any room.",
-    image: "https://m.media-amazon.com/images/P/B01FWQ8PYO.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/517S6KGFmOL.jpg",
     amazon: "https://amzn.to/4yckysK"
   },
 
@@ -28,7 +28,7 @@ const products = [
     name: "American Flag Decorative Throw",
     category: "Home & Decor",
     description: "A decorative American flag throw with a classic red, white and blue design for bedrooms and living spaces.",
-    image: "https://m.media-amazon.com/images/P/B07DLBK5S2.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/71-nQj+zWiL._AC_SL1024_.jpg",
     amazon: "https://amzn.to/4gFyggC"
   },
 
@@ -36,7 +36,7 @@ const products = [
     name: "American Flag Patriotic Wrapping Paper",
     category: "Gifts & Wrapping",
     description: "Patriotic wrapping paper for birthdays, Independence Day gifts and celebrations with an American theme.",
-    image: "https://m.media-amazon.com/images/P/B0DS287G17.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/61IcouhInaL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4ixUqnq"
   },
 
@@ -44,7 +44,7 @@ const products = [
     name: "WRAPAHOLIC Reversible July 4th Wrapping Paper",
     category: "Gifts & Wrapping",
     description: "Reversible patriotic wrapping paper for American celebrations, summer parties and festive gift giving.",
-    image: "https://m.media-amazon.com/images/P/B0BTYNN8PR.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/51uL9hVGMBL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4x2sHz0"
   },
 
@@ -52,7 +52,7 @@ const products = [
     name: "Patriotic Veteran Eagle Sculpture",
     category: "Home & Decor",
     description: "A striking patriotic sculpture celebrating American independence and military service.",
-    image: "https://m.media-amazon.com/images/P/B0FKYM1HFL.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/81RJhqIzsgL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4xuPTqF"
   },
 
@@ -60,7 +60,7 @@ const products = [
     name: "America 250 1776–2026 Decoration",
     category: "America 250",
     description: "A commemorative 1776–2026 America 250 decoration for celebrating the United States' 250th anniversary.",
-    image: "https://m.media-amazon.com/images/P/B0GVS7ZYW4.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/81sUiXaasJL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4wUbN5n"
   },
 
@@ -68,7 +68,7 @@ const products = [
     name: "MICANU American Crystal Earrings",
     category: "Jewelry & Fashion",
     description: "Sparkling patriotic earrings that add a subtle red, white and blue accent to an outfit.",
-    image: "https://m.media-amazon.com/images/P/B09HK334C1.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/41wpJjWdQvL.jpg",
     amazon: "https://amzn.to/3UrJOfY"
   },
 
@@ -100,7 +100,7 @@ const products = [
     name: "DK86 Men's American Flag RFID Wallet",
     category: "Gifts & Useful",
     description: "A practical American flag wallet with RFID blocking, making it an easy patriotic gift for him.",
-    image: "https://m.media-amazon.com/images/P/B0DFML8ZFT.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/51cz7kZXeuL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4zU6yFM"
   },
 
@@ -156,7 +156,7 @@ const products = [
     name: "America 250 1776–2026 Patriotic Gift",
     category: "America 250",
     description: "A commemorative America 250 gift celebrating the 1776–2026 milestone and American history.",
-    image: "https://m.media-amazon.com/images/P/B0H6GS6P5W.01.LZZZZZZZ.jpg",
+    image: "https://m.media-amazon.com/images/I/81sUiXaasJL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/3UKESCU"
   }
 
