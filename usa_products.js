@@ -163,39 +163,32 @@ const products = [
 ];
 
 
-// ------------------------------------------------------------
-// AMAZON IMAGE HANDLING
-// ------------------------------------------------------------
+// ============================================================
+// AMAZON IMAGE URL
+// ============================================================
 
-function amazonImageUrls(asin) {
+function getAmazonImage(asin) {
 
-  return [
-
-    // Current Amazon image CDN
-    `https://m.media-amazon.com/images/P/${asin}.01.L.jpg`,
-
-    // Alternative Amazon image CDN
-    `https://images-na.ssl-images-amazon.com/images/P/${asin}.01.L.jpg`,
-
-    // Amazon Ads image endpoint
-    `https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=${asin}&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20`
-
-  ];
+  return (
+    "https://images-na.ssl-images-amazon.com/images/P/" +
+    asin +
+    ".01.LZZZZZZZ.jpg"
+  );
 
 }
 
 
-// ------------------------------------------------------------
-// CREATE PRODUCT CARDS
-// ------------------------------------------------------------
+// ============================================================
+// RENDER PRODUCTS
+// ============================================================
 
-const productsContainer = document.getElementById("products");
+const container = document.getElementById("products");
 
-if (productsContainer) {
+if (container) {
 
-  productsContainer.innerHTML = products.map((product, i) => {
+  container.innerHTML = products.map((product, index) => {
 
-    const images = amazonImageUrls(product.asin);
+    const image = getAmazonImage(product.asin);
 
     return `
 
@@ -203,16 +196,15 @@ if (productsContainer) {
 
         <div class="pic">
 
-          <span class="num">${i + 1}</span>
+          <span class="num">
+            ${index + 1}
+          </span>
 
           <img
-            src="${images[0]}"
-            data-images='${JSON.stringify(images)}'
-            data-image-index="0"
+            src="${image}"
             alt="${product.name}"
-            loading="${i < 4 ? "eager" : "lazy"}"
+            loading="${index < 4 ? "eager" : "lazy"}"
             decoding="async"
-            onerror="tryNextAmazonImage(this)"
           >
 
         </div>
@@ -247,46 +239,5 @@ if (productsContainer) {
     `;
 
   }).join("");
-
-}
-
-
-// ------------------------------------------------------------
-// IMAGE FALLBACK
-// ------------------------------------------------------------
-
-function tryNextAmazonImage(img) {
-
-  let images;
-
-  try {
-
-    images = JSON.parse(img.dataset.images);
-
-  } catch (error) {
-
-    return;
-
-  }
-
-  let index = parseInt(
-    img.dataset.imageIndex || "0",
-    10
-  );
-
-  index++;
-
-  if (index < images.length) {
-
-    img.dataset.imageIndex = index;
-
-    img.src = images[index];
-
-  } else {
-
-    // Keep the card clean if Amazon has no usable image.
-    img.style.display = "none";
-
-  }
 
 }
