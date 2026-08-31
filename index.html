@@ -3,8 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Beautiful gift ideas, wrapping inspiration and thoughtful finds.">
-<title>Giftitution — Find Gifts They'll Love</title>
+
+<meta name="description" content="Discover thoughtful gift ideas, beautiful wrapping paper and fun finds for birthdays, holidays and every special occasion.">
+
+<link rel="canonical" href="https://giftitution.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Giftitution | Thoughtful Gift Ideas & Beautiful Finds">
+<meta property="og:description" content="Discover thoughtful gift ideas, beautiful wrapping paper and fun finds for birthdays, holidays and every special occasion.">
+<meta property="og:url" content="https://giftitution.com/">
+<meta property="og:site_name" content="Giftitution">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Giftitution | Thoughtful Gift Ideas & Beautiful Finds">
+<meta name="twitter:description" content="Discover thoughtful gift ideas, beautiful wrapping paper and fun finds for birthdays, holidays and every special occasion.">
+
+<title>Giftitution | Thoughtful Gift Ideas & Beautiful Finds</title>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Giftitution",
+  "url": "https://giftitution.com/"
+}
+</script>
 
 <style>
 *{box-sizing:border-box}
@@ -89,7 +112,7 @@ h1 em{
 
 .heading{
   text-align:center;
-  max-width:760px;
+  max-width:800px;
   margin:0 auto 42px
 }
 
@@ -101,9 +124,17 @@ h1 em{
 }
 
 .heading p:last-child,
-.about p:last-child{
+.about p{
   color:#66737a;
   font:15px Arial,sans-serif
+}
+
+.collection-intro{
+  max-width:720px;
+  margin:0 auto 48px;
+  color:#66737a;
+  font:15px Arial,sans-serif;
+  text-align:center
 }
 
 .grid{
@@ -188,9 +219,14 @@ h1 em{
   background:#f7f2eb
 }
 
-.about p:last-child{
+.about p{
   max-width:700px;
   margin:25px auto
+}
+
+.about .disclosure{
+  margin-top:30px;
+  font-size:13px
 }
 
 footer{
@@ -241,12 +277,16 @@ footer{
 <body>
 
 <header>
-  <a class="brand" href="/">🎀 Giftitution</a>
-  <nav>
+  <a class="brand" href="/" aria-label="Giftitution home">🎀 Giftitution</a>
+
+  <nav aria-label="Main navigation">
     <a href="#collections">Collections</a>
     <a href="#about">About</a>
   </nav>
 </header>
+
+
+<main>
 
 <section class="hero">
   <p class="eyebrow">BEAUTIFUL FINDS • THOUGHTFUL GIFTS</p>
@@ -257,51 +297,87 @@ footer{
   </h1>
 
   <p>
-    Carefully selected gift ideas, wrapping inspiration and beautiful little finds.
+    Carefully selected gift ideas, beautiful wrapping inspiration
+    and thoughtful little finds.
   </p>
 
-  <a class="button" href="#collections">Explore ideas</a>
+  <a class="button" href="#collections">
+    Explore ideas
+  </a>
 </section>
+
 
 <section id="collections" class="section">
 
   <div class="heading">
     <p class="eyebrow">THE KIDS COLLECTION</p>
 
-    <h2>20 Fun Gift Wrapping Papers for Kids</h2>
+    <h2>
+      20 Fun Gift Wrapping Papers for Kids
+    </h2>
 
     <p>
-      Playful wrapping paper for birthdays, celebrations and little surprises. Amazon Collection.
-      Some links on this site are affiliate links, which means we may earn a commission if you make a purchase through them, at no extra cost to you.
+      Playful wrapping paper for birthdays, celebrations and little surprises.
     </p>
   </div>
 
-  <div class="grid" id="products"></div>
+
+  <div class="collection-intro">
+    <p>
+      Looking for fun wrapping paper for a child's birthday?
+      We've collected 20 playful gift wrapping ideas featuring
+      dinosaurs, Minecraft, Bluey, Disney characters, sports and
+      colorful birthday designs. These picks are especially suited
+      to kids' birthday presents, party gifts and other celebrations.
+    </p>
+  </div>
+
+
+  <div class="grid" id="products" aria-live="polite"></div>
 
 </section>
+
 
 <section id="about" class="about">
 
   <p class="eyebrow">ABOUT GIFTITUTION</p>
 
-  <h2>Beautiful ideas, without the endless searching.</h2>
+  <h2>
+    Beautiful ideas, without the endless searching.
+  </h2>
 
   <p>
     Giftitution curates products and ideas we think are worth discovering.
-    Some links on this site are affiliate links, which means we may earn a commission
-    if you make a purchase through them, at no extra cost to you.
+    We look for fun, beautiful and useful finds that can make gift giving
+    a little easier and more enjoyable.
   </p>
 
   <p>
+    Our collections are designed to help you discover ideas quickly,
+    whether you're shopping for a birthday, holiday, celebration or
+    simply looking for something special.
+  </p>
+
+  <p class="disclosure">
+    <strong>Affiliate Disclosure:</strong><br>
+    Some links on this site are affiliate links, which means we may earn
+    a commission if you make a purchase through them, at no extra cost to you.
+  </p>
+
+  <p class="disclosure">
     <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
   </p>
 
 </section>
 
+</main>
+
+
 <footer>
   <div>🎀 Giftitution</div>
   <div>© 2026 Giftitution</div>
 </footer>
+
 
 <script src="products.js"></script>
 
@@ -310,29 +386,40 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
   <article class="card">
 
     <div class="pic">
-      <span class="num">${i + 1}</span>
+
+      <span class="num" aria-hidden="true">
+        ${i + 1}
+      </span>
 
       <img
         src="${product.image}"
-        alt="${product.name}"
-        loading="lazy"
+        alt="${product.name} - Giftitution kids' gift wrapping pick"
+        loading="${i < 4 ? "eager" : "lazy"}"
         onerror="this.style.display='none'"
       >
+
     </div>
 
     <div class="info">
 
-      <div class="cat">${product.category}</div>
+      <div class="cat">
+        ${product.category}
+      </div>
 
-      <h3>${product.name}</h3>
+      <h3>
+        ${product.name}
+      </h3>
 
-      <p>${product.description}</p>
+      <p>
+        ${product.description}
+      </p>
 
       <a
         class="link"
         href="${product.amazon}"
         target="_blank"
         rel="sponsored noopener"
+        aria-label="View ${product.name} on Amazon"
       >
         View product →
       </a>
