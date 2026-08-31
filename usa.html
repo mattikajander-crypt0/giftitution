@@ -385,11 +385,7 @@ footer{
 <script src="usa_products.js"></script>
 
 <script>
-
-const productGrid = document.getElementById("products");
-
-productGrid.innerHTML = products.map((product, i) => `
-
+document.getElementById("products").innerHTML = products.map((product, i) => `
   <article class="card">
 
     <a
@@ -402,15 +398,15 @@ productGrid.innerHTML = products.map((product, i) => `
 
       <div class="pic">
 
-        <span class="num">
+        <span class="num" aria-hidden="true">
           ${i + 1}
         </span>
 
         <img
           src="${product.image}"
-          alt="${product.name}"
-          loading="lazy"
-          decoding="async"
+          alt="${product.name} - Giftitution American-themed gift pick"
+          loading="${i < 4 ? "eager" : "lazy"}"
+          onerror="this.style.display='none'"
         >
 
       </div>
@@ -436,6 +432,7 @@ productGrid.innerHTML = products.map((product, i) => `
         href="${product.amazon}"
         target="_blank"
         rel="sponsored noopener"
+        aria-label="View ${product.name} on Amazon"
       >
         View product →
       </a>
@@ -443,9 +440,7 @@ productGrid.innerHTML = products.map((product, i) => `
     </div>
 
   </article>
-
 `).join("");
-
 </script>
 
 </body>
