@@ -4,9 +4,9 @@ const products = [
     name: "Vintage American Flag Wall Decor",
     category: "Home & Decor",
     description: "Vintage-style American flag wall art that adds a classic patriotic touch to a living room, office or entryway.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B075CJ6QY2&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B075CJ6QY2",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B075CJ6QY2.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B075CJ6QY2.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4zKTfXQ"
   },
 
@@ -14,9 +14,9 @@ const products = [
     name: "American Flag Patchwork Pillow",
     category: "Home & Decor",
     description: "A farmhouse-style American flag accent pillow for sofas, chairs and patriotic home decorating.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0973Y5SJH&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0973Y5SJH",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0973Y5SJH.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0973Y5SJH.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3Usy395"
   },
 
@@ -24,9 +24,9 @@ const products = [
     name: "Stars & Stripes Throw Blanket",
     category: "Home & Decor",
     description: "A cozy Stars and Stripes throw that brings an unmistakably American accent to any room.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01FWQ8PYO&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B01FWQ8PYO",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B01FWQ8PYO.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B01FWQ8PYO.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4yckysK"
   },
 
@@ -34,19 +34,29 @@ const products = [
     name: "American Flag Decorative Throw",
     category: "Home & Decor",
     description: "A decorative American flag throw with a classic red, white and blue design for bedrooms and living spaces.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07DLBK5S2&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B07DLBK5S2",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B07DLBK5S2.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B07DLBK5S2.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4gFyggC"
+  },
+
+  {
+    name: "Patriotic Veteran Eagle Sculpture",
+    category: "Home & Decor",
+    description: "A striking patriotic sculpture celebrating American independence and military service.",
+    asin: "B0FKYM1HFL",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0FKYM1HFL.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0FKYM1HFL.02.LZZZZZZZ.jpg",
+    amazon: "https://amzn.to/4xuPTqF"
   },
 
   {
     name: "American Flag Patriotic Wrapping Paper",
     category: "Gifts & Wrapping",
     description: "Patriotic wrapping paper for birthdays, Independence Day gifts and celebrations with an American theme.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DS287G17&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0DS287G17",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0DS287G17.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0DS287G17.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4ixUqnq"
   },
 
@@ -54,29 +64,19 @@ const products = [
     name: "WRAPAHOLIC Reversible July 4th Wrapping Paper",
     category: "Gifts & Wrapping",
     description: "Reversible patriotic wrapping paper for American celebrations, summer parties and festive gift giving.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BTYNN8PR&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0BTYNN8PR",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0BTYNN8PR.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0BTYNN8PR.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4x2sHz0"
-  },
-
-  {
-    name: "Patriotic Veteran Eagle Sculpture",
-    category: "Home & Decor",
-    description: "A striking patriotic sculpture celebrating American independence and military service.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0FKYM1HFL&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
-    amazon: "https://amzn.to/4xuPTqF"
   },
 
   {
     name: "America 250 1776–2026 Decoration",
     category: "America 250",
     description: "A commemorative 1776–2026 America 250 decoration for celebrating the United States' 250th anniversary.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GVS7ZYW4&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GVS7ZYW4",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GVS7ZYW4.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GVS7ZYW4.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4wUbN5n"
   },
 
@@ -84,9 +84,9 @@ const products = [
     name: "MICANU American Crystal Earrings",
     category: "Jewelry & Fashion",
     description: "Sparkling patriotic earrings that add a subtle red, white and blue accent to an outfit.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09HK334C1&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B09HK334C1",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B09HK334C1.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B09HK334C1.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3UrJOfY"
   },
 
@@ -94,9 +94,9 @@ const products = [
     name: "Freedom & American Flag Canvas Tote",
     category: "Jewelry & Fashion",
     description: "A patriotic canvas tote with a freedom-inspired American design for everyday use or gifting.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GTB7JZWG&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GTB7JZWG",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GTB7JZWG.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GTB7JZWG.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4hZtxbR"
   },
 
@@ -104,9 +104,9 @@ const products = [
     name: "Montana West Patriotic Crossbody Bag",
     category: "Jewelry & Fashion",
     description: "A distinctive Montana West crossbody bag with patriotic styling, ideal for everyday wear or gifting.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GXB3GTWS&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GXB3GTWS",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GXB3GTWS.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GXB3GTWS.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4y2Rjbu"
   },
 
@@ -114,9 +114,9 @@ const products = [
     name: "Montana West Vintage American Patriotic Bag",
     category: "Jewelry & Fashion",
     description: "A western-inspired patriotic handbag combining American motifs with a distinctive vintage look.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GXB71B35&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GXB71B35",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GXB71B35.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GXB71B35.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4qJZ9EC"
   },
 
@@ -124,9 +124,9 @@ const products = [
     name: "DK86 Men's American Flag RFID Wallet",
     category: "Gifts & Useful",
     description: "A practical American flag wallet with RFID blocking, making it an easy patriotic gift for him.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0DFML8ZFT&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0DFML8ZFT",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0DFML8ZFT.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0DFML8ZFT.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4zU6yFM"
   },
 
@@ -134,9 +134,9 @@ const products = [
     name: "American Flag Tumbler",
     category: "Gifts & Useful",
     description: "A reusable tumbler with an American flag theme for everyday drinks, work and patriotic gifting.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0CCRZSH4V&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0CCRZSH4V",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0CCRZSH4V.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0CCRZSH4V.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4ckKslu"
   },
 
@@ -144,9 +144,9 @@ const products = [
     name: "BenShot 'Merica Bullet Shot Glass",
     category: "Gifts & Useful",
     description: "A distinctive American-themed gift featuring a bullet design and a playful 'Merica' theme.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01MRKGYPM&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B01MRKGYPM",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B01MRKGYPM.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B01MRKGYPM.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4xGo8Ly"
   },
 
@@ -154,9 +154,9 @@ const products = [
     name: "Elaximn Vintage American Flag Earrings",
     category: "Jewelry & Fashion",
     description: "Vintage-inspired patriotic earrings designed for Independence Day, patriotic events and everyday Americana style.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GT48N8N9&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GT48N8N9",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GT48N8N9.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GT48N8N9.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3SAGyyk"
   },
 
@@ -164,9 +164,9 @@ const products = [
     name: "American Flag Garden Memorial Decor",
     category: "Outdoor",
     description: "A patriotic garden memorial decoration for yards, gardens and outdoor spaces.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GJ6FCDCR&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GJ6FCDCR",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GJ6FCDCR.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GJ6FCDCR.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4xAaQQU"
   },
 
@@ -174,9 +174,9 @@ const products = [
     name: "Rushmore Rose American Flag",
     category: "Outdoor",
     description: "A full-size American flag for homes, gardens, porches and other outdoor patriotic displays.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01HMWWLCI&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B01HMWWLCI",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B01HMWWLCI.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B01HMWWLCI.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4wWeByP"
   },
 
@@ -184,9 +184,9 @@ const products = [
     name: "Patriotic Solar Outdoor Lanterns",
     category: "Outdoor",
     description: "Solar-powered outdoor lanterns with an American patriotic theme for porches, gardens and summer gatherings.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0GQNL2ZVX&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0GQNL2ZVX",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0GQNL2ZVX.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GQNL2ZVX.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4i5ivlk"
   },
 
@@ -194,9 +194,9 @@ const products = [
     name: "America 250 1776–2026 Patriotic Gift",
     category: "America 250",
     description: "A commemorative America 250 gift celebrating the 1776–2026 milestone and American history.",
-    image: "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0H6GS6P5W&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20",
-    images: [],
-    video: null,
+    asin: "B0H6GS6P5W",
+    image: "https://images-na.ssl-images-amazon.com/images/P/B0H6GS6P5W.01.LZZZZZZZ.jpg",
+    image2: "https://images-na.ssl-images-amazon.com/images/P/B0H6GS6P5W.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3UKESCU"
   }
 
