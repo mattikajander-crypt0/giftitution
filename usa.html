@@ -13,6 +13,7 @@
 <title>American-Themed Gifts & Finds | Giftitution</title>
 
 <style>
+
 *{
   box-sizing:border-box
 }
@@ -178,23 +179,6 @@ h1 em{
   font:700 14px Arial,sans-serif
 }
 
-.image-fallback{
-  position:absolute;
-  inset:0;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-  color:#9b8f84;
-  background:#f3eee7;
-  font:12px Arial,sans-serif
-}
-
-.pic.image-failed .image-fallback{
-  display:flex
-}
-
 .info{
   padding:18px
 }
@@ -291,6 +275,7 @@ footer{
   }
 
 }
+
 </style>
 </head>
 
@@ -401,26 +386,7 @@ footer{
 
 <script>
 
-/*
-  Giftitution product rendering
-
-  The product data lives in usa_products.js.
-
-  Required:
-    product.name
-    product.category
-    product.description
-    product.image
-    product.amazon
-
-  Optional future fields:
-    product.images
-    product.video
-*/
-
-
 const productGrid = document.getElementById("products");
-
 
 productGrid.innerHTML = products.map((product, i) => `
 
@@ -443,26 +409,13 @@ productGrid.innerHTML = products.map((product, i) => `
         <img
           src="${product.image}"
           alt="${product.name}"
-          width="500"
-          height="625"
+          loading="lazy"
           decoding="async"
-          referrerpolicy="no-referrer"
-          onerror="
-            this.style.display='none';
-            this.parentElement.classList.add('image-failed');
-          "
         >
-
-        <div class="image-fallback">
-          <span>
-            Image unavailable
-          </span>
-        </div>
 
       </div>
 
     </a>
-
 
     <div class="info">
 
@@ -492,7 +445,6 @@ productGrid.innerHTML = products.map((product, i) => `
   </article>
 
 `).join("");
-
 
 </script>
 
