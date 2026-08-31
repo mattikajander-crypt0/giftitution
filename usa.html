@@ -13,7 +13,9 @@
 <title>American-Themed Gifts & Finds | Giftitution</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box
+}
 
 body{
   margin:0;
@@ -128,11 +130,18 @@ h1 em{
   border:1px solid #e7ddd2;
   border-radius:18px;
   background:#fff;
-  transition:.2s
+  transition:transform .2s ease, box-shadow .2s ease
 }
 
 .card:hover{
-  transform:translateY(-3px)
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(23,42,53,.08)
+}
+
+.product-image-link{
+  display:block;
+  color:inherit;
+  text-decoration:none
 }
 
 .pic{
@@ -146,12 +155,17 @@ h1 em{
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block
+  display:block;
+  transition:transform .25s ease
+}
+
+.product-image-link:hover .pic img{
+  transform:scale(1.025)
 }
 
 .num{
   position:absolute;
-  z-index:2;
+  z-index:3;
   top:12px;
   left:12px;
   width:34px;
@@ -162,6 +176,23 @@ h1 em{
   background:#b86f67;
   color:white;
   font:700 14px Arial,sans-serif
+}
+
+.image-fallback{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  color:#9b8f84;
+  background:#f3eee7;
+  font:12px Arial,sans-serif
+}
+
+.pic.image-failed .image-fallback{
+  display:flex
 }
 
 .info{
@@ -189,6 +220,10 @@ h1 em{
   color:#172a35;
   font:700 13px Arial,sans-serif;
   text-decoration:none
+}
+
+.link:hover{
+  text-decoration:underline
 }
 
 .about{
@@ -220,12 +255,15 @@ footer{
 }
 
 @media(max-width:950px){
+
   .grid{
     grid-template-columns:repeat(2,1fr)
   }
+
 }
 
 @media(max-width:600px){
+
   nav{
     gap:10px;
     font-size:12px
@@ -251,6 +289,7 @@ footer{
     flex-direction:column;
     gap:8px
   }
+
 }
 </style>
 </head>
@@ -258,14 +297,19 @@ footer{
 <body>
 
 <header>
-  <a class="brand" href="index.html">🎀 Giftitution</a>
+
+  <a class="brand" href="index.html">
+    🎀 Giftitution
+  </a>
 
   <nav>
     <a href="index.html">Kids</a>
     <a href="#collections">USA Finds</a>
     <a href="#about">About</a>
   </nav>
+
 </header>
+
 
 <section class="hero">
 
@@ -290,6 +334,7 @@ footer{
 
 </section>
 
+
 <section id="collections" class="section">
 
   <div class="heading">
@@ -312,6 +357,7 @@ footer{
   <div class="grid" id="products"></div>
 
 </section>
+
 
 <section id="about" class="about">
 
@@ -337,63 +383,116 @@ footer{
 
 </section>
 
+
 <footer>
 
-  <div>🎀 Giftitution</div>
+  <div>
+    🎀 Giftitution
+  </div>
 
-  <div>© 2026 Giftitution</div>
+  <div>
+    © 2026 Giftitution
+  </div>
 
 </footer>
+
 
 <script src="usa_products.js"></script>
 
 <script>
 
-document.getElementById("products").innerHTML = products.map((product, i) => `
+/*
+  Giftitution product rendering
 
-<article class="card">
+  The product data lives in usa_products.js.
 
-  <div class="pic">
+  Required:
+    product.name
+    product.category
+    product.description
+    product.image
+    product.amazon
 
-    <span class="num">${i + 1}</span>
+  Optional future fields:
+    product.images
+    product.video
+*/
 
-    <img
-      src="${product.image}"
-      alt="${product.name}"
-      loading="lazy"
-      onerror="this.style.display='none'"
-    >
 
-  </div>
+const productGrid = document.getElementById("products");
 
-  <div class="info">
 
-    <div class="cat">
-      ${product.category}
-    </div>
+productGrid.innerHTML = products.map((product, i) => `
 
-    <h3>
-      ${product.name}
-    </h3>
-
-    <p>
-      ${product.description}
-    </p>
+  <article class="card">
 
     <a
-      class="link"
+      class="product-image-link"
       href="${product.amazon}"
       target="_blank"
       rel="sponsored noopener"
+      aria-label="View ${product.name} on Amazon"
     >
-      View product →
+
+      <div class="pic">
+
+        <span class="num">
+          ${i + 1}
+        </span>
+
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          width="500"
+          height="625"
+          decoding="async"
+          referrerpolicy="no-referrer"
+          onerror="
+            this.style.display='none';
+            this.parentElement.classList.add('image-failed');
+          "
+        >
+
+        <div class="image-fallback">
+          <span>
+            Image unavailable
+          </span>
+        </div>
+
+      </div>
+
     </a>
 
-  </div>
 
-</article>
+    <div class="info">
+
+      <div class="cat">
+        ${product.category}
+      </div>
+
+      <h3>
+        ${product.name}
+      </h3>
+
+      <p>
+        ${product.description}
+      </p>
+
+      <a
+        class="link"
+        href="${product.amazon}"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+        View product →
+      </a>
+
+    </div>
+
+  </article>
 
 `).join("");
+
 
 </script>
 
