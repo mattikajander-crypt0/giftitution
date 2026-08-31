@@ -5,8 +5,6 @@ const products = [
     category: "Home & Decor",
     description: "Vintage-style American flag wall art that adds a classic patriotic touch to a living room, office or entryway.",
     asin: "B075CJ6QY2",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B075CJ6QY2.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B075CJ6QY2.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4zKTfXQ"
   },
 
@@ -15,8 +13,6 @@ const products = [
     category: "Home & Decor",
     description: "A farmhouse-style American flag accent pillow for sofas, chairs and patriotic home decorating.",
     asin: "B0973Y5SJH",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0973Y5SJH.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0973Y5SJH.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3Usy395"
   },
 
@@ -25,8 +21,6 @@ const products = [
     category: "Home & Decor",
     description: "A cozy Stars and Stripes throw that brings an unmistakably American accent to any room.",
     asin: "B01FWQ8PYO",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B01FWQ8PYO.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B01FWQ8PYO.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4yckysK"
   },
 
@@ -35,19 +29,7 @@ const products = [
     category: "Home & Decor",
     description: "A decorative American flag throw with a classic red, white and blue design for bedrooms and living spaces.",
     asin: "B07DLBK5S2",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B07DLBK5S2.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B07DLBK5S2.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4gFyggC"
-  },
-
-  {
-    name: "Patriotic Veteran Eagle Sculpture",
-    category: "Home & Decor",
-    description: "A striking patriotic sculpture celebrating American independence and military service.",
-    asin: "B0FKYM1HFL",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0FKYM1HFL.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0FKYM1HFL.02.LZZZZZZZ.jpg",
-    amazon: "https://amzn.to/4xuPTqF"
   },
 
   {
@@ -55,8 +37,6 @@ const products = [
     category: "Gifts & Wrapping",
     description: "Patriotic wrapping paper for birthdays, Independence Day gifts and celebrations with an American theme.",
     asin: "B0DS287G17",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0DS287G17.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0DS287G17.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4ixUqnq"
   },
 
@@ -65,18 +45,22 @@ const products = [
     category: "Gifts & Wrapping",
     description: "Reversible patriotic wrapping paper for American celebrations, summer parties and festive gift giving.",
     asin: "B0BTYNN8PR",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0BTYNN8PR.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0BTYNN8PR.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4x2sHz0"
+  },
+
+  {
+    name: "Patriotic Veteran Eagle Sculpture",
+    category: "Home & Decor",
+    description: "A striking bald eagle wall sculpture celebrating American independence and military service.",
+    asin: "B0FKYM1HFL",
+    amazon: "https://amzn.to/4xuPTqF"
   },
 
   {
     name: "America 250 1776–2026 Decoration",
     category: "America 250",
-    description: "A commemorative 1776–2026 America 250 decoration for celebrating the United States' 250th anniversary.",
+    description: "A commemorative 1776–2026 America 250 decoration celebrating the United States' 250th anniversary.",
     asin: "B0GVS7ZYW4",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GVS7ZYW4.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GVS7ZYW4.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4wUbN5n"
   },
 
@@ -85,8 +69,6 @@ const products = [
     category: "Jewelry & Fashion",
     description: "Sparkling patriotic earrings that add a subtle red, white and blue accent to an outfit.",
     asin: "B09HK334C1",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B09HK334C1.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B09HK334C1.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3UrJOfY"
   },
 
@@ -95,8 +77,6 @@ const products = [
     category: "Jewelry & Fashion",
     description: "A patriotic canvas tote with a freedom-inspired American design for everyday use or gifting.",
     asin: "B0GTB7JZWG",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GTB7JZWG.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GTB7JZWG.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4hZtxbR"
   },
 
@@ -105,8 +85,6 @@ const products = [
     category: "Jewelry & Fashion",
     description: "A distinctive Montana West crossbody bag with patriotic styling, ideal for everyday wear or gifting.",
     asin: "B0GXB3GTWS",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GXB3GTWS.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GXB3GTWS.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4y2Rjbu"
   },
 
@@ -115,8 +93,6 @@ const products = [
     category: "Jewelry & Fashion",
     description: "A western-inspired patriotic handbag combining American motifs with a distinctive vintage look.",
     asin: "B0GXB71B35",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GXB71B35.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GXB71B35.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4qJZ9EC"
   },
 
@@ -125,8 +101,6 @@ const products = [
     category: "Gifts & Useful",
     description: "A practical American flag wallet with RFID blocking, making it an easy patriotic gift for him.",
     asin: "B0DFML8ZFT",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0DFML8ZFT.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0DFML8ZFT.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4zU6yFM"
   },
 
@@ -135,8 +109,6 @@ const products = [
     category: "Gifts & Useful",
     description: "A reusable tumbler with an American flag theme for everyday drinks, work and patriotic gifting.",
     asin: "B0CCRZSH4V",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0CCRZSH4V.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0CCRZSH4V.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4ckKslu"
   },
 
@@ -145,8 +117,6 @@ const products = [
     category: "Gifts & Useful",
     description: "A distinctive American-themed gift featuring a bullet design and a playful 'Merica' theme.",
     asin: "B01MRKGYPM",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B01MRKGYPM.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B01MRKGYPM.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4xGo8Ly"
   },
 
@@ -155,8 +125,6 @@ const products = [
     category: "Jewelry & Fashion",
     description: "Vintage-inspired patriotic earrings designed for Independence Day, patriotic events and everyday Americana style.",
     asin: "B0GT48N8N9",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GT48N8N9.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GT48N8N9.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3SAGyyk"
   },
 
@@ -165,28 +133,22 @@ const products = [
     category: "Outdoor",
     description: "A patriotic garden memorial decoration for yards, gardens and outdoor spaces.",
     asin: "B0GJ6FCDCR",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GJ6FCDCR.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GJ6FCDCR.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4xAaQQU"
   },
 
   {
     name: "Rushmore Rose American Flag",
     category: "Outdoor",
-    description: "A full-size American flag for homes, gardens, porches and other outdoor patriotic displays.",
+    description: "A full-size American flag made for homes, gardens, porches and other outdoor patriotic displays.",
     asin: "B01HMWWLCI",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B01HMWWLCI.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B01HMWWLCI.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4wWeByP"
   },
 
   {
     name: "Patriotic Solar Outdoor Lanterns",
     category: "Outdoor",
-    description: "Solar-powered outdoor lanterns with an American patriotic theme for porches, gardens and summer gatherings.",
+    description: "Solar-powered outdoor lanterns with an American patriotic theme for porches, gardens and outdoor gatherings.",
     asin: "B0GQNL2ZVX",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0GQNL2ZVX.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0GQNL2ZVX.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/4i5ivlk"
   },
 
@@ -195,9 +157,136 @@ const products = [
     category: "America 250",
     description: "A commemorative America 250 gift celebrating the 1776–2026 milestone and American history.",
     asin: "B0H6GS6P5W",
-    image: "https://images-na.ssl-images-amazon.com/images/P/B0H6GS6P5W.01.LZZZZZZZ.jpg",
-    image2: "https://images-na.ssl-images-amazon.com/images/P/B0H6GS6P5W.02.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3UKESCU"
   }
 
 ];
+
+
+// ------------------------------------------------------------
+// AMAZON IMAGE HANDLING
+// ------------------------------------------------------------
+
+function amazonImageUrls(asin) {
+
+  return [
+
+    // Current Amazon image CDN
+    `https://m.media-amazon.com/images/P/${asin}.01.L.jpg`,
+
+    // Alternative Amazon image CDN
+    `https://images-na.ssl-images-amazon.com/images/P/${asin}.01.L.jpg`,
+
+    // Amazon Ads image endpoint
+    `https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=${asin}&Format=_SL500_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=giftitution-20`
+
+  ];
+
+}
+
+
+// ------------------------------------------------------------
+// CREATE PRODUCT CARDS
+// ------------------------------------------------------------
+
+const productsContainer = document.getElementById("products");
+
+if (productsContainer) {
+
+  productsContainer.innerHTML = products.map((product, i) => {
+
+    const images = amazonImageUrls(product.asin);
+
+    return `
+
+      <article class="card">
+
+        <div class="pic">
+
+          <span class="num">${i + 1}</span>
+
+          <img
+            src="${images[0]}"
+            data-images='${JSON.stringify(images)}'
+            data-image-index="0"
+            alt="${product.name}"
+            loading="${i < 4 ? "eager" : "lazy"}"
+            decoding="async"
+            onerror="tryNextAmazonImage(this)"
+          >
+
+        </div>
+
+        <div class="info">
+
+          <div class="cat">
+            ${product.category}
+          </div>
+
+          <h3>
+            ${product.name}
+          </h3>
+
+          <p>
+            ${product.description}
+          </p>
+
+          <a
+            class="link"
+            href="${product.amazon}"
+            target="_blank"
+            rel="sponsored noopener"
+          >
+            View product →
+          </a>
+
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+}
+
+
+// ------------------------------------------------------------
+// IMAGE FALLBACK
+// ------------------------------------------------------------
+
+function tryNextAmazonImage(img) {
+
+  let images;
+
+  try {
+
+    images = JSON.parse(img.dataset.images);
+
+  } catch (error) {
+
+    return;
+
+  }
+
+  let index = parseInt(
+    img.dataset.imageIndex || "0",
+    10
+  );
+
+  index++;
+
+  if (index < images.length) {
+
+    img.dataset.imageIndex = index;
+
+    img.src = images[index];
+
+  } else {
+
+    // Keep the card clean if Amazon has no usable image.
+    img.style.display = "none";
+
+  }
+
+}
