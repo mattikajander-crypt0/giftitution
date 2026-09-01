@@ -168,7 +168,18 @@ h1 em{
   width:100%;
   height:100%;
   object-fit:cover;
-  display:block
+  display:block;
+  transition:transform .25s ease
+}
+
+.product-image-link{
+  display:block;
+  color:inherit;
+  text-decoration:none
+}
+
+.product-image-link:hover .pic img{
+  transform:scale(1.025)
 }
 
 .num{
@@ -385,20 +396,30 @@ footer{
 document.getElementById("products").innerHTML = products.map((product, i) => `
   <article class="card">
 
-    <div class="pic">
+    <a
+      class="product-image-link"
+      href="${product.amazon}"
+      target="_blank"
+      rel="sponsored noopener"
+      aria-label="View ${product.name} on Amazon"
+    >
 
-      <span class="num" aria-hidden="true">
-        ${i + 1}
-      </span>
+      <div class="pic">
 
-      <img
-        src="${product.image}"
-        alt="${product.name} - Giftitution kids' gift wrapping pick"
-        loading="${i < 4 ? "eager" : "lazy"}"
-        onerror="this.style.display='none'"
-      >
+        <span class="num" aria-hidden="true">
+          ${i + 1}
+        </span>
 
-    </div>
+        <img
+          src="${product.image}"
+          alt="${product.name} - Giftitution kids' gift wrapping pick"
+          loading="${i < 4 ? "eager" : "lazy"}"
+          onerror="this.style.display='none'"
+        >
+
+      </div>
+
+    </a>
 
     <div class="info">
 
