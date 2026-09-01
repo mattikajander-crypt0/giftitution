@@ -4,21 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="Analog journaling and junk journal supplies curated by Giftitution — beautiful gifts for journaling, scrapbooking and slow, screen-free creativity.">
+<meta name="description" content="Analog journaling and junk journal supplies curated by Giftitution — washi tape, stickers, stamps, journals and stationery for slow, screen-free creativity.">
+
+<meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://giftitution.com/journaling-junk-journal-supplies">
 <link rel="icon" href="/favicon.png" type="image/png">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Analog Journaling & Junk Journal Supplies | Giftitution">
-<meta property="og:description" content="Beautiful journaling and junk journal supplies, curated by Giftitution.">
+<meta property="og:description" content="Beautiful journaling and junk journal supplies — washi tape, stickers, stamps, journals and stationery, curated by Giftitution.">
 <meta property="og:url" content="https://giftitution.com/journaling-junk-journal-supplies">
 <meta property="og:image" content="https://giftitution.com/logo-hero.webp">
 <meta property="og:site_name" content="Giftitution">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Analog Journaling & Junk Journal Supplies | Giftitution">
-<meta name="twitter:description" content="Beautiful journaling and junk journal supplies, curated by Giftitution.">
+<meta name="twitter:description" content="Beautiful journaling and junk journal supplies — washi tape, stickers, stamps, journals and stationery, curated by Giftitution.">
 <meta name="twitter:image" content="https://giftitution.com/logo-hero.webp">
 
 <title>Analog Journaling & Junk Journal Supplies | Giftitution</title>
@@ -54,10 +56,11 @@
 </header>
 
 
-<main>
-
 <section class="hero">
-  <p class="eyebrow">ANALOG JOURNALING &amp; JUNK JOURNAL SUPPLIES</p>
+
+  <p class="eyebrow">
+    ANALOG JOURNALING &amp; JUNK JOURNAL SUPPLIES
+  </p>
 
   <h1>
     Slow down,<br>
@@ -69,61 +72,72 @@
     scrapbooking — gifts for anyone trading screen time for washi tape
     and a good pen.
   </p>
+
+  <a class="button" href="#collections">
+    Explore the collection
+  </a>
+
 </section>
 
 
-<section class="section">
+<section id="collections" class="section">
 
-  <div class="coming-soon-hero">
-    <div class="coming-soon-icon" aria-hidden="true">📓</div>
-    <h2>Our Journaling &amp; Junk Journal Edit Is Coming Soon</h2>
-    <p>
-      Analog journaling has never been more popular — helped along by the
-      Pen Pals and slow-living trend. We're curating a collection of
-      journals, washi tape, stamps, vintage ephemera and other junk
-      journal supplies worth gifting to the journaler in your life.
+  <div class="heading">
+
+    <p class="eyebrow">
+      THE JOURNALING &amp; JUNK JOURNAL EDIT
     </p>
 
-    <div class="notify-box">
-      <p>
-        This collection is being built right now. In the meantime, explore
-        our live collections below.
-      </p>
-      <div class="explore-links">
-        <a class="button" href="/gift-wrapping">Shop Gift Wrapping</a>
-        <a class="button secondary" href="/usa">Shop American-Themed Finds</a>
-      </div>
-    </div>
+    <h2>
+      20 Journaling &amp; Junk Journal Supplies
+    </h2>
+
+    <p>
+      Washi tape, stickers, wax seals, stamps, handmade paper and journals
+      — everything for the Pen Pals era of slow, analog creativity.
+    </p>
+
   </div>
+
+  <p class="disclosure-top">
+    Disclosure: This page contains affiliate links. As an Amazon Associate, Giftitution earns from qualifying purchases, at no extra cost to you.
+  </p>
+
+  <div class="grid" id="products"></div>
 
 </section>
 
 
 <section id="about" class="about">
 
-  <p class="eyebrow">ABOUT GIFTITUTION</p>
-
-  <h2>Beautiful ideas, without the endless searching.</h2>
-
-  <p>
-    Giftitution is a curated gift-finding site. We hand-pick beautiful and
-    affordable gift ideas — mostly $10–$40 — and organize them into
-    collections you can actually shop, by occasion, by price and by person.
+  <p class="eyebrow">
+    ABOUT GIFTITUTION
   </p>
 
-  <p class="disclosure">
-    <strong>Affiliate Disclosure:</strong><br>
+  <h2>
+    Beautiful ideas, without the endless searching.
+  </h2>
+
+  <p>
+    Giftitution curates products and ideas we think are worth discovering.
     Some links on this site are affiliate links, which means we may earn
     a commission if you make a purchase through them, at no extra cost to you.
   </p>
 
-  <p class="disclosure">
-    <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
+  <p>
+    Explore our other collections, including
+    <a class="link" href="/gift-wrapping">Gift Wrapping</a>,
+    <a class="link" href="/usa">American-Themed Finds</a> or
+    head back to <a class="link" href="/">all collections</a>.
+  </p>
+
+  <p>
+    <strong>
+      As an Amazon Associate I earn from qualifying purchases.
+    </strong>
   </p>
 
 </section>
-
-</main>
 
 
 <footer>
@@ -176,6 +190,68 @@
   </div>
 
 </footer>
+
+
+<script src="/journaling-products.js"></script>
+
+<script>
+document.getElementById("products").innerHTML = products.map((product, i) => `
+  <article class="card">
+
+    <a
+      class="product-image-link"
+      href="${product.amazon}"
+      target="_blank"
+      rel="sponsored noopener"
+      aria-label="View ${product.name} on Amazon"
+    >
+
+      <div class="pic">
+
+        <span class="num" aria-hidden="true">
+          ${i + 1}
+        </span>
+
+        <img
+          src="${product.image}"
+          alt="${product.name} - Giftitution journaling pick"
+          loading="${i < 4 ? "eager" : "lazy"}"
+          onerror="this.style.display='none'"
+        >
+
+      </div>
+
+    </a>
+
+    <div class="info">
+
+      <div class="cat">
+        ${product.category}
+      </div>
+
+      <h3>
+        ${product.name}
+      </h3>
+
+      <p>
+        ${product.description}
+      </p>
+
+      <a
+        class="link"
+        href="${product.amazon}"
+        target="_blank"
+        rel="sponsored noopener"
+        aria-label="View ${product.name} on Amazon"
+      >
+        View product →
+      </a>
+
+    </div>
+
+  </article>
+`).join("");
+</script>
 
 </body>
 </html>
