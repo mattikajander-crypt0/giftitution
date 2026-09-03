@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="Jewel tone gifts for the home — deep pine and olive bath textiles curated by Giftitution, from small accents to statement pieces.">
+<meta name="description" content="Jewel tone gifts for the home — deep pine and olive bath textiles and emerald-toned jewelry curated by Giftitution, from small accents to statement pieces.">
 
 <meta name="robots" content="index,follow">
 
@@ -13,14 +13,14 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jewel Tone Gifts for the Home | Giftitution">
-<meta property="og:description" content="Deep pine and olive bath textiles curated by Giftitution, from small accents to statement pieces.">
+<meta property="og:description" content="Deep pine and olive bath textiles and emerald-toned jewelry curated by Giftitution, from small accents to statement pieces.">
 <meta property="og:url" content="https://giftitution.com/color-lovers/jewel-tones">
 <meta property="og:image" content="https://giftitution.com/logo-hero.webp">
 <meta property="og:site_name" content="Giftitution">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jewel Tone Gifts for the Home | Giftitution">
-<meta name="twitter:description" content="Deep pine and olive bath textiles curated by Giftitution, from small accents to statement pieces.">
+<meta name="twitter:description" content="Deep pine and olive bath textiles and emerald-toned jewelry curated by Giftitution, from small accents to statement pieces.">
 <meta name="twitter:image" content="https://giftitution.com/logo-hero.webp">
 
 <title>Jewel Tone Gifts for the Home | Color Lovers — Giftitution</title>
@@ -68,9 +68,10 @@
   </h1>
 
   <p>
-    Deep pine and olive bath textiles inspired by 2026's biggest home color
-    trend. This edit skews a little higher than our usual $10&ndash;$40
-    range — small jewel-toned accents up to a true statement piece.
+    Deep pine and olive bath textiles and jewelry, inspired by 2026's
+    biggest home color trend. This edit skews a little higher than our
+    usual $10&ndash;$40 range — small jewel-toned accents up to a true
+    statement piece.
   </p>
 
   <a class="button" href="#collections">
@@ -89,12 +90,12 @@
     </p>
 
     <h2>
-      Jewel Tone Gifts for the Home
+      8 Jewel Tone Gifts for the Home &amp; You
     </h2>
 
     <p>
-      Rich pine and olive greens, from a single accent to a room-defining
-      statement piece — the first in our Color Lovers series.
+      Rich pine and olive greens for the home, plus a few emerald-toned
+      jewelry finds — the first in our Color Lovers series.
     </p>
 
   </div>
@@ -198,7 +199,7 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
       href="${product.url}"
       target="_blank"
       rel="sponsored noopener"
-      aria-label="View ${product.name} on Quiet Town"
+      aria-label="View ${product.name}"
     >
 
       <div class="pic">
@@ -207,7 +208,9 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
           ${i + 1}
         </span>
 
-        <div class="pic-placeholder">Photo coming soon</div>
+        ${product.image
+          ? `<img src="${product.image}" alt="${product.name} - Giftitution jewel tone pick" loading="${i < 4 ? "eager" : "lazy"}" onerror="this.style.display='none'">`
+          : `<div class="pic-placeholder">Photo coming soon</div>`}
 
       </div>
 
@@ -237,7 +240,7 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
         href="${product.url}"
         target="_blank"
         rel="sponsored noopener"
-        aria-label="View ${product.name} on Quiet Town"
+        aria-label="View ${product.name}"
       >
         View product →
       </a>
