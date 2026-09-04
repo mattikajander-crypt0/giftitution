@@ -158,6 +158,14 @@ const products = [
     description: "A handmade Italian travel journal with ivory paper, perfect for daily notes, dreams or trip planning.",
     image: "https://m.media-amazon.com/images/I/81pC1xZLfJL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4cltZNX"
+  },
+
+  {
+    name: "Book and Glasses Earrings",
+    category: "Bookish Jewelry",
+    description: "Mismatched gold stud earrings with a book stack and an open book and glasses — a small gift for the one-more-chapter crowd.",
+    image: "https://yellowowlworkshop.com/cdn/shop/files/j215-books-and-glasses-post-gold-earrings-white-background_2048x.jpg",
+    amazon: "https://yellowowlworkshop.com/products/book-and-glasses-earrings"
   }
 
 ];
