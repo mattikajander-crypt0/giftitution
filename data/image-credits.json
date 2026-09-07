@@ -1,0 +1,15 @@
+[
+  {
+    "pin_id": "jewel-06",
+    "source": "pexels",
+    "photo_id": 19283464,
+    "photographer": "Nati",
+    "photographer_url": "https://www.pexels.com/@nati-87264186",
+    "photo_url": "https://www.pexels.com/photo/christmas-ornaments-with-velvet-ribbon-19283464/",
+    "alt": "Flat lay of emerald green textiles and accessories on a neutral background",
+    "pexels_alt": "Festive flat lay featuring velvet ribbon, gold ornaments, and pine branch on a soft background.",
+    "query": "emerald green flat lay",
+    "retrieved": "2026-09-07",
+    "used_in": "jewel-tones-06.png"
+  }
+]

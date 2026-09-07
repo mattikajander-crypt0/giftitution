@@ -1,0 +1,12 @@
+{
+  "name": "giftitution-pin-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "generate-pins": "node scripts/generate-pins.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}
