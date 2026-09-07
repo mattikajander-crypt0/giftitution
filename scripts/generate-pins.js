@@ -34,7 +34,26 @@ const SAFE_HEIGHT = SAFE_BOTTOM_Y - SAFE_TOP_Y;
 const TEXT_MARGIN_X = 80;
 const MAX_TEXT_WIDTH = CANVAS_WIDTH - TEXT_MARGIN_X * 2;
 
+// Headline sizes tuned to dominate the pin at full size, not just be legible —
+// Pinterest feed thumbnails render at ~236px wide, a ~4.2x downscale from
+// this 1000px canvas. A 236px-wide preview is rendered alongside every pin
+// specifically so feed-scale legibility can be checked without eyeballing it.
+const TYPOGRAPHIC_FONT_SIZE = 132;
+const STOCK_FONT_SIZE = 100;
+const PREVIEW_WIDTH = 236;
+const PREVIEW_HEIGHT = Math.round((PREVIEW_WIDTH * CANVAS_HEIGHT) / CANVAS_WIDTH);
+
 const PEXELS_ENDPOINT = 'https://api.pexels.com/v1/search';
+
+// Stock photos are picked for a year-round "jewel tones" theme, not a
+// holiday one — skip any candidate whose Pexels alt text flags it as
+// seasonal rather than silently accepting whatever ranks first.
+const SEASONAL_TERMS = ['christmas', 'holiday', 'xmas', 'santa', 'new year', 'easter', 'valentine'];
+
+function isSeasonal(photo) {
+  const alt = (photo.alt || '').toLowerCase();
+  return SEASONAL_TERMS.some((term) => alt.includes(term));
+}
 
 // ---------------------------------------------------------------- utilities
 
@@ -106,15 +125,34 @@ function wrapText(text, fontSize, maxWidthPx) {
   return lines;
 }
 
-function buildTextSvg(title, fontSize, textColor) {
+// Shared geometry so the scrim, the region sampler, and the SVG text all
+// agree on exactly where "the text area" is.
+function measureTextBlock(title, fontSize) {
   const lines = wrapText(title, fontSize, MAX_TEXT_WIDTH);
   const lineHeight = fontSize * 1.25;
   const blockHeight = lines.length * lineHeight;
-  const startY = SAFE_TOP_Y + (SAFE_HEIGHT - blockHeight) / 2 + fontSize;
+  const startY = SAFE_TOP_Y + (SAFE_HEIGHT - blockHeight) / 2 + fontSize; // baseline of first line
+  const ascent = fontSize * 0.85;
+  const descent = fontSize * 0.25;
+  const padding = fontSize * 0.35;
+  const top = Math.max(0, Math.round(startY - ascent - padding));
+  const bottom = Math.min(CANVAS_HEIGHT, Math.round(startY + (lines.length - 1) * lineHeight + descent + padding));
+  return { lines, lineHeight, startY, top, height: bottom - top };
+}
 
-  const textElements = lines
+// scrim: { fill: '#000000' | '#FFFFFF', opacity: 0..1 } drawn full-width
+// behind the text, or null for no scrim (typographic pins on a solid fill
+// don't need one — there's no underlying detail to guard against).
+function buildTextSvg(title, fontSize, textColor, scrim) {
+  const block = measureTextBlock(title, fontSize);
+
+  const scrimRect = scrim
+    ? `<rect x="0" y="${block.top}" width="${CANVAS_WIDTH}" height="${block.height}" fill="${scrim.fill}" fill-opacity="${scrim.opacity}" />`
+    : '';
+
+  const textElements = block.lines
     .map((line, i) => {
-      const y = startY + i * lineHeight;
+      const y = block.startY + i * block.lineHeight;
       return `<text x="${CANVAS_WIDTH / 2}" y="${y}" font-family="Arial, Helvetica, sans-serif" ` +
         `font-weight="800" font-size="${fontSize}" fill="${textColor}" text-anchor="middle">` +
         `${escapeXml(line)}</text>`;
@@ -122,18 +160,53 @@ function buildTextSvg(title, fontSize, textColor) {
     .join('\n');
 
   return `<svg width="${CANVAS_WIDTH}" height="${CANVAS_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+${scrimRect}
 ${textElements}
 </svg>`;
+}
+
+// Average out a region of an already-canvas-sized image buffer to a single
+// hex color by downsampling it to 1x1 — cheap, dependency-free "region
+// average" that avoids sampling against the whole photo's avg_color when
+// only a band behind the headline actually matters for contrast.
+async function sampleRegionHex(canvasBuffer, { top, height }) {
+  const region = await sharp(canvasBuffer)
+    .extract({ left: 0, top, width: CANVAS_WIDTH, height })
+    .resize(1, 1, { fit: 'fill' })
+    .raw()
+    .toBuffer();
+  const [r, g, b] = region;
+  return `#${[r, g, b].map((c) => c.toString(16).padStart(2, '0')).join('')}`;
 }
 
 function todayIso() {
   return new Date().toISOString().slice(0, 10);
 }
 
+// Dedupe key is (photo_id, used_in) only — not pin_id or date. A re-run of
+// the same pin with the same photo is exactly what this skips; a later run
+// of the same pin with a *different* photo_id is a new entry and must stay,
+// since the file records every photo that has ever been used, not just the
+// current one. Existing entries are never rewritten or removed.
 function appendCredits(entries) {
   const existing = loadJson(CREDITS_PATH, []);
-  const updated = existing.concat(entries);
+  const seen = new Set(existing.map((e) => `${e.photo_id}::${e.used_in}`));
+
+  const toAppend = [];
+  for (const entry of entries) {
+    const key = `${entry.photo_id}::${entry.used_in}`;
+    if (seen.has(key)) {
+      console.log(`  Skipping duplicate credit entry — photo ${entry.photo_id} already logged for ${entry.used_in}`);
+      continue;
+    }
+    seen.add(key);
+    toAppend.push(entry);
+  }
+
+  if (!toAppend.length) return 0;
+  const updated = existing.concat(toAppend);
   fs.writeFileSync(CREDITS_PATH, JSON.stringify(updated, null, 2) + '\n', 'utf8');
+  return toAppend.length;
 }
 
 // ------------------------------------------------------------------ Pexels
@@ -172,7 +245,19 @@ async function searchPexels(query, hex) {
   if (!data.photos || data.photos.length === 0) {
     throw new Error(`Pexels query "${query}" returned 0 results. Not falling back to another source — fix the query or the color filter.`);
   }
-  return data.photos[0];
+
+  for (const photo of data.photos) {
+    if (isSeasonal(photo)) {
+      console.log(`  Skipping Pexels photo ${photo.id} — seasonal alt text: "${photo.alt}"`);
+      continue;
+    }
+    return photo;
+  }
+
+  throw new Error(
+    `All ${data.photos.length} Pexels results for "${query}" were filtered out as seasonal ` +
+    `(${SEASONAL_TERMS.join(', ')}). Not falling back to a seasonal photo — try a different query.`
+  );
 }
 
 async function fetchImageBuffer(url) {
@@ -186,9 +271,10 @@ async function fetchImageBuffer(url) {
 // -------------------------------------------------------------- pin build
 
 async function buildTypographicPin(pin, collection) {
-  const bgHex = `#${collection.hex}`;
+  const paletteHex = collection.typographic_hex || collection.hex;
+  const bgHex = `#${paletteHex}`;
   const { color: textColor } = pickTextColor(bgHex);
-  const svg = buildTextSvg(pin.title, 72, textColor);
+  const svg = buildTextSvg(pin.title, TYPOGRAPHIC_FONT_SIZE, textColor, null);
 
   const background = await sharp({
     create: {
@@ -209,15 +295,30 @@ async function buildStockPin(pin, collection) {
   const query = pin.image_source.replace(/^pexels search:\s*/i, '').trim();
   const photo = await searchPexels(query, collection.hex);
 
-  console.log(`  Selected Pexels photo ${photo.id} by ${photo.photographer} (avg_color ${photo.avg_color})`);
-
-  const { color: textColor } = pickTextColor(photo.avg_color);
-  const svg = buildTextSvg(pin.title, 56, textColor);
+  console.log(`  Selected Pexels photo ${photo.id} by ${photo.photographer} (whole-image avg_color ${photo.avg_color})`);
 
   const rawImage = await fetchImageBuffer(photo.src.portrait);
-
-  const composed = await sharp(rawImage)
+  const canvasBuffer = await sharp(rawImage)
     .resize(CANVAS_WIDTH, CANVAS_HEIGHT, { fit: 'cover', position: 'centre' })
+    .png()
+    .toBuffer();
+
+  // avg_color describes the whole photo, not what's actually behind the
+  // headline — sample the text's own band instead, then pin both the text
+  // color and the scrim's tint to that so the pairing always contrasts
+  // regardless of local detail (a dark ribbon in an otherwise light photo,
+  // for example) rather than relying on the scrim alone to save it.
+  const block = measureTextBlock(pin.title, STOCK_FONT_SIZE);
+  const regionHex = await sampleRegionHex(canvasBuffer, block);
+  const { color: textColor } = pickTextColor(regionHex);
+  const scrim = textColor === '#FFFFFF'
+    ? { fill: '#000000', opacity: 0.55 }
+    : { fill: '#FFFFFF', opacity: 0.55 };
+  console.log(`  Text-region sampled color ${regionHex} -> ${textColor} text on a ${scrim.fill} scrim`);
+
+  const svg = buildTextSvg(pin.title, STOCK_FONT_SIZE, textColor, scrim);
+
+  const composed = await sharp(canvasBuffer)
     .composite([{ input: Buffer.from(svg) }])
     .png()
     .toBuffer();
@@ -300,6 +401,14 @@ async function run(requestedIds) {
     fs.writeFileSync(pngPath, result.buffer);
     console.log(`  Wrote ${pngPath}`);
 
+    const previewBuffer = await sharp(result.buffer)
+      .resize(PREVIEW_WIDTH, PREVIEW_HEIGHT, { fit: 'cover' })
+      .png()
+      .toBuffer();
+    const previewPath = path.join(OUTPUT_DIR, `${slug}-preview236.png`);
+    fs.writeFileSync(previewPath, previewBuffer);
+    console.log(`  Wrote ${previewPath} (${PREVIEW_WIDTH}x${PREVIEW_HEIGHT} feed-scale preview)`);
+
     if (result.creditEntry) {
       result.creditEntry.used_in = `${slug}.png`;
       newCredits.push(result.creditEntry);
@@ -310,8 +419,8 @@ async function run(requestedIds) {
   }
 
   if (newCredits.length) {
-    appendCredits(newCredits);
-    console.log(`\nAppended ${newCredits.length} entr(y/ies) to ${CREDITS_PATH}`);
+    const appendedCount = appendCredits(newCredits);
+    console.log(`\nAppended ${appendedCount} of ${newCredits.length} credit entr(y/ies) to ${CREDITS_PATH} (${newCredits.length - appendedCount} duplicate(s) skipped)`);
   }
 
   console.log('\nDone.');

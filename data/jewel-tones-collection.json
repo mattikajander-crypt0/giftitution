@@ -6,7 +6,9 @@
     "parent_theme": "Color Lovers Gifts",
     "trend_reference": "Behr 2026 Color of the Year — Hidden Gem (editorial reference only, no commercial affiliation)",
     "hex": "596D69",
-    "hex_source": "https://www.behr.com/colors/color-detail/n430-6a — Behr 'Hidden Gem' N430-6A, added for Pexels color-search and typographic background use, not present in the original collection file",
+    "hex_source": "https://www.behr.com/colors/color-detail/n430-6a — Behr 'Hidden Gem' N430-6A, added for Pexels color-search use, not present in the original collection file",
+    "typographic_hex": "0B6E4F",
+    "typographic_hex_note": "Behr's actual paint hex (596D69) is a muted smoky sage that reads as washed-out on a backlit screen. This is a deeper, more saturated emerald in the same green-jade hue family, used only as the solid background for typographic pins — not a Behr-endorsed value.",
     "price_note": "Wider price range than core Gifts Under $25 collections — frame transparently as small splurges to statement pieces",
     "status": "draft — Yellow Owl and Amazon products not yet selected, verify image rights before publishing pins",
     "affiliate_url_rule": "source: amazon always needs a tagged affiliate_url (no sitewide auto-conversion). source: quiettown/yellowowlworkshop/brobasket/monbento leave affiliate_url empty on-site — Convert-a-Link handles it live. See CLAUDE.md section 4/5."
