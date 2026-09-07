@@ -4,21 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="Gift ideas for him curated by Giftitution — thoughtful, affordable gifts for partners, dads, brothers and friends.">
+<meta name="description" content="Gift ideas for him curated by Giftitution — colorful apparel and treats for partners, dads, brothers and friends.">
+
+<meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://giftitution.com/gifts-for-him">
 <link rel="icon" href="/favicon.png" type="image/png">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gift Ideas for Him | Giftitution">
-<meta property="og:description" content="Thoughtful gift ideas for the men in your life, curated by Giftitution.">
+<meta property="og:description" content="Colorful apparel and treats for the men in your life, curated by Giftitution.">
 <meta property="og:url" content="https://giftitution.com/gifts-for-him">
 <meta property="og:image" content="https://giftitution.com/logo-hero.webp">
 <meta property="og:site_name" content="Giftitution">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gift Ideas for Him | Giftitution">
-<meta name="twitter:description" content="Thoughtful gift ideas for the men in your life, curated by Giftitution.">
+<meta name="twitter:description" content="Colorful apparel and treats for the men in your life, curated by Giftitution.">
 <meta name="twitter:image" content="https://giftitution.com/logo-hero.webp">
 
 <title>Gift Ideas for Him | Giftitution</title>
@@ -54,8 +56,6 @@
 </header>
 
 
-<main>
-
 <section class="hero">
   <p class="eyebrow">GIFTS FOR HIM</p>
 
@@ -65,35 +65,40 @@
   </h1>
 
   <p>
-    Gift ideas for partners, dads, brothers and friends — beautiful,
-    mostly $10–$40 finds that feel like more than an afterthought.
+    Gift ideas for partners, dads, brothers and friends — bold apparel and
+    easy wins that feel like more than an afterthought.
   </p>
+
+  <a class="button" href="#collections">
+    Explore the collection
+  </a>
 </section>
 
 
-<section class="section">
+<section id="collections" class="section">
 
-  <div class="coming-soon-hero">
-    <div class="coming-soon-icon" aria-hidden="true">🥃</div>
-    <h2>Our Gifts-for-Him Edit Is Coming Soon</h2>
-    <p>
-      Shopping for the men in your life shouldn't default to socks and
-      gift cards. We're curating gift ideas for boyfriends, husbands,
-      dads and friends — things they'll actually use, from everyday
-      carry gear to a few well-chosen splurges.
+  <div class="heading">
+
+    <p class="eyebrow">
+      THE GIFTS-FOR-HIM EDIT
     </p>
 
-    <div class="notify-box">
-      <p>
-        This collection is being built right now. In the meantime, explore
-        our live collections below.
-      </p>
-      <div class="explore-links">
-        <a class="button" href="/gift-wrapping">Shop Gift Wrapping</a>
-        <a class="button secondary" href="/usa">Shop American-Themed Finds</a>
-      </div>
-    </div>
+    <h2>
+      5 Gifts for Him
+    </h2>
+
+    <p>
+      Bold all-over-print apparel, playful socks and a loaded candy box —
+      things he'll actually wear or eat.
+    </p>
+
   </div>
+
+  <p class="disclosure-top">
+    Disclosure: This page contains affiliate links. Giftitution may earn a commission on qualifying purchases, at no extra cost to you.
+  </p>
+
+  <div class="grid" id="products"></div>
 
 </section>
 
@@ -116,13 +121,7 @@
     a commission if you make a purchase through them, at no extra cost to you.
   </p>
 
-  <p class="disclosure">
-    <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
-  </p>
-
 </section>
-
-</main>
 
 
 <footer>
@@ -143,20 +142,20 @@
       <a href="/usa">American-Themed Finds</a>
       <a href="/journaling-junk-journal-supplies">Journaling &amp; Junk Journal Supplies</a>
       <a href="/bookish-fantasy-gifts-under-25">Bookish Fantasy Gifts Under $25</a>
-      <a href="/color-lovers/jewel-tones">Jewel Tone Gifts</a>
+      <a href="/color-lovers/jewel-tones">Color Lovers Gifts</a>
+      <a href="/cozy-craft-starter-kits">Best for Kids</a>
+      <a href="/gifts-for-him">Gifts for Him</a>
     </div>
 
     <div class="footer-col">
       <h4>More Collections</h4>
       <a href="/gifts-under-25">Gifts Under $25</a>
-      <a href="/gifts-for-him">Gifts for Him</a>
       <a href="/gifts-for-her">Gifts for Her</a>
       <a href="/unique-gift-ideas">Unique Gift Ideas</a>
     </div>
 
     <div class="footer-col">
       <h4>Coming Soon</h4>
-      <a href="/cozy-craft-starter-kits">Cozy Craft Starter Kits</a>
       <a href="/stocking-stuffers">Stocking Stuffers</a>
       <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
@@ -176,6 +175,73 @@
   </div>
 
 </footer>
+
+
+<script src="/gifts-for-him-products.js"></script>
+
+<script>
+document.getElementById("products").innerHTML = products.map((product, i) => `
+  <article class="card">
+
+    <a
+      class="product-image-link"
+      href="${product.url}"
+      target="_blank"
+      rel="sponsored noopener"
+      aria-label="View ${product.name}"
+    >
+
+      <div class="pic">
+
+        <span class="num" aria-hidden="true">
+          ${i + 1}
+        </span>
+
+        <img
+          src="${product.image}"
+          alt="${product.name} - Giftitution gift for him pick"
+          loading="${i < 4 ? "eager" : "lazy"}"
+          onerror="this.style.display='none'"
+        >
+
+      </div>
+
+    </a>
+
+    <div class="info">
+
+      <div class="cat">
+        ${product.category}
+      </div>
+
+      <h3>
+        ${product.name}
+      </h3>
+
+      <p class="price-row">
+        <span class="price-now">$${product.price.toFixed(2)}</span>
+        ${product.priceOriginal ? `<span class="price-original">$${product.priceOriginal.toFixed(2)}</span>` : ""}
+      </p>
+
+      <p>
+        ${product.description}
+      </p>
+
+      <a
+        class="link"
+        href="${product.url}"
+        target="_blank"
+        rel="sponsored noopener"
+        aria-label="View ${product.name}"
+      >
+        View product →
+      </a>
+
+    </div>
+
+  </article>
+`).join("");
+</script>
 
 <script src="https://www.dwin2.com/pub.3065263.min.js"></script>
 
