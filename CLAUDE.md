@@ -45,6 +45,24 @@ Rate limits: 200/hour, 20,000/month. Log X-Ratelimit-Remaining on every
 call. On HTTP 429, back off — never retry in a loop. Working around the
 rate limit terminates API access.
 
+### image-credits.json — append-only with dedupe
+
+The file is an attribution register, not a run log. It answers "which
+photos are in use and who gets credit", so credits can be rendered on
+collection pages.
+
+- Append a new entry only when photo_id + used_in is not already present.
+  An exact re-run writes nothing.
+- Do not include a date or pin_id in the dedupe key. A date defeats the
+  dedupe on the next day's run.
+- Never delete or edit an existing entry. Skipping an identical append is
+  not deletion — history stays intact.
+- If a pin later uses a different photo, keep both entries. The file
+  records what has been used, not only what is current.
+- Required fields per entry: photographer, photographer_url, photo_url,
+  pexels_id, source, used_in. If any is missing, fail the run rather than
+  writing an incomplete entry.
+
 ### Endpoint
 ```
 GET https://api.pexels.com/v1/search
