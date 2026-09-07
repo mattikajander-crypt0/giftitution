@@ -1,0 +1,91 @@
+{
+  "collection": {
+    "name": "Hidden Gem: Jewel Tone Gifts",
+    "slug": "jewel-tones",
+    "url": "giftitution.com/color-lovers/jewel-tones",
+    "parent_theme": "Color Lovers Gifts",
+    "trend_reference": "Behr 2026 Color of the Year — Hidden Gem (editorial reference only, no commercial affiliation)",
+    "hex": "596D69",
+    "hex_source": "https://www.behr.com/colors/color-detail/n430-6a — Behr 'Hidden Gem' N430-6A, added for Pexels color-search and typographic background use, not present in the original collection file",
+    "price_note": "Wider price range than core Gifts Under $25 collections — frame transparently as small splurges to statement pieces",
+    "status": "draft — Yellow Owl and Amazon products not yet selected, verify image rights before publishing pins",
+    "affiliate_url_rule": "source: amazon always needs a tagged affiliate_url (no sitewide auto-conversion). source: quiettown/yellowowlworkshop/brobasket/monbento leave affiliate_url empty on-site — Convert-a-Link handles it live. See CLAUDE.md section 4/5."
+  },
+  "products": [
+    {
+      "name": "Sun Shower Pine",
+      "source": "quiettown",
+      "url": "https://quiettownhome.com/products/sun-shower-pine",
+      "price": 31.50,
+      "price_original": 45.00,
+      "type": "shower curtain",
+      "availability": "in stock",
+      "notes": "on sale, confirm before publishing"
+    },
+    {
+      "name": "Sun Shower Olive",
+      "source": "quiettown",
+      "url": "https://quiettownhome.com/products/sun-shower-olive",
+      "price": 42.00,
+      "type": "shower curtain",
+      "availability": "check before publishing"
+    },
+    {
+      "name": "Sun Shower 2x2 in Olive",
+      "source": "quiettown",
+      "url": "https://quiettownhome.com/products/sun-shower-2x2-olive",
+      "price": 52.00,
+      "type": "shower curtain, checkered",
+      "availability": "check before publishing"
+    },
+    {
+      "name": "Reyes Pine",
+      "source": "quiettown",
+      "url": "https://quiettownhome.com/products/reyes-pine-bath-rug",
+      "price": 82.00,
+      "price_original": 128.00,
+      "type": "bath rug",
+      "role": "statement piece / hero product photo candidate",
+      "availability": "check before publishing"
+    },
+    {
+      "name": "Quiet Town x Felt + Fat Soap Dish, Cucumber",
+      "source": "quiettown",
+      "url": "https://quiettownhome.com/products/quiet-town-x-felt-fat-soap-dish-cucumber",
+      "price": 21.00,
+      "type": "accessory",
+      "availability": "SOLD OUT as of 2026-09 — do not publish until restocked"
+    },
+    {
+      "name": "TBD — jewel-toned jewelry piece",
+      "source": "yellowowlworkshop",
+      "url": null,
+      "price": null,
+      "type": "jewelry",
+      "notes": "No color filter on their site. Browse /collections/earrings and /collections/rings manually or via Claude Code to select 1-2 emerald/jade-toned pieces before finalizing."
+    },
+    {
+      "name": "TBD — jewel-toned Amazon accent piece",
+      "source": "amazon",
+      "url": null,
+      "affiliate_url": null,
+      "price": null,
+      "type": "TBD",
+      "notes": "Not on Awin — affiliate_url is mandatory here once a product is picked. Build via SiteStripe or ?tag=OURTAG-20 before publishing anywhere. Fill in matching your actual Associates tag."
+    }
+  ],
+  "pins": [
+    { "id": "jewel-01", "format": "typographic", "title": "10 Jewel Tone Gifts for the Home", "description": "#ad Deep, rich jewel-tone finds for anyone who loves color. Curated picks from small accents to statement pieces.", "alt": "Text graphic reading 10 Jewel Tone Gifts for the Home on a deep green background" },
+    { "id": "jewel-02", "format": "typographic", "title": "2026's Biggest Color Trend, Gift-Ready", "description": "#ad Smoky jade and emerald tones are everywhere this year. Here's how to gift the trend.", "alt": "Typography pin about 2026 jewel tone color trend gifts" },
+    { "id": "jewel-03", "format": "typographic", "title": "Not Just a Trend: Jewel Tones for Every Room", "description": "#ad Jewel tone home finds that outlast a trend cycle. Curated for gifting.", "alt": "Bold typography pin about lasting jewel tone home decor" },
+    { "id": "jewel-04", "format": "typographic", "title": "Small Splurge or Statement Piece? Both.", "description": "#ad Jewel tone gifts from under $25 to true showstoppers. Something for every budget.", "alt": "Typography pin contrasting small splurge and statement jewel tone gifts" },
+    { "id": "jewel-05", "format": "typographic", "title": "Jewel Tone Gifts, Any Season", "description": "#ad Rich greens and emerald hues that work year-round, not just for the holidays.", "alt": "Typography pin about year-round jewel tone gift ideas" },
+    { "id": "jewel-06", "format": "stock", "title": "Emerald Flat Lay Gift Ideas", "description": "#ad Emerald and jade tones styled for gifting inspiration.", "alt": "Flat lay of emerald green textiles and accessories on a neutral background", "image_source": "pexels search: emerald green flat lay" },
+    { "id": "jewel-07", "format": "stock", "title": "A Jewel Tone Bathroom Refresh", "description": "#ad Deep green textiles bring instant richness to a neutral bathroom.", "alt": "Cozy bathroom scene styled with deep green textiles", "image_source": "pexels search: green bathroom decor" },
+    { "id": "jewel-08", "format": "stock", "title": "Hidden Gem Color Palette", "description": "#ad The 2026 color of the year, broken down into a shoppable palette.", "alt": "Color palette graphic showing jewel tone green shades and pairings", "image_source": "pexels search: green color palette swatches" },
+    { "id": "jewel-09", "format": "stock", "title": "The Feel of Jewel Tone Textiles", "description": "#ad There's a reason rich greens feel luxurious. Texture is everything.", "alt": "Close-up of hands touching deep green textured fabric", "image_source": "pexels search: hands touching green fabric texture" },
+    { "id": "jewel-10", "format": "stock", "title": "Neutral vs Jewel Tone: See the Difference", "description": "#ad A simple swap that transforms a neutral space into something richer.", "alt": "Before and after comparison of neutral versus jewel tone home styling", "image_source": "pexels search: before after home decor color" },
+    { "id": "jewel-11", "format": "product", "title": "This Bath Rug Is the Whole Vibe", "description": "#ad Reyes Pine bath rug — the statement piece of this collection.", "alt": "Deep pine green striped bath rug photographed flat", "product_ref": "Reyes Pine" },
+    { "id": "jewel-12", "format": "product", "title": "Olive Green, Done Right", "description": "#ad Sun Shower Olive shower curtain styled in a bathroom setting.", "alt": "Olive green shower curtain hanging in a white tiled bathroom", "product_ref": "Sun Shower Olive" }
+  ]
+}
