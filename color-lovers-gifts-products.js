@@ -37,47 +37,6 @@ const products = [
   },
 
   {
-    name: "Reyes Pine",
-    category: "Bath Rugs",
-    description: "The statement piece of this edit — a deep pine-green bath rug rich enough to build a whole room around.",
-    price: 88.00,
-    priceOriginal: 135.00,
-    url: "https://quiettownhome.com/products/reyes-pine"
-  },
-
-  {
-    name: "Sun Shower Pine",
-    category: "Shower Curtains",
-    description: "A deep pine-green shower curtain that turns an everyday bathroom into a jewel-toned retreat.",
-    price: 48.00,
-    url: "https://quiettownhome.com/products/sun-shower-pine"
-  },
-
-  {
-    name: "Sun Shower Olive",
-    category: "Shower Curtains",
-    description: "An olive-toned take on the Sun Shower print, rich enough to anchor a whole bathroom refresh.",
-    price: 48.00,
-    url: "https://quiettownhome.com/products/sun-shower-olive"
-  },
-
-  {
-    name: "Sun Shower 2x2 in Olive",
-    category: "Shower Curtains",
-    description: "The same jewel-toned richness in a bolder checkered pattern, in a deep olive colorway.",
-    price: 58.00,
-    url: "https://quiettownhome.com/products/sun-shower-2x2-olive"
-  },
-
-  {
-    name: "Alex Mill x Quiet Town Perfect Weekender Tote",
-    category: "Bags",
-    description: "A collaboration weekender tote from Quiet Town's Upcycled Collection, made with Alex Mill.",
-    price: 275.00,
-    url: "https://quiettownhome.com/products/alex-mill-x-quiet-town-perfect-weekender-tote"
-  },
-
-  {
     name: "Color Wheel Crew Socks",
     category: "Apparel",
     description: "Crew socks printed with a full color wheel — a fun, colorful pick for anyone who loves color.",
@@ -160,6 +119,47 @@ const products = [
     priceOriginal: 59.95,
     image: "https://cdn.shopify.com/s/files/1/0385/6229/products/iEDM-TShirtFrontVer02-DeepJungle-2048x2730.jpg?v=1756849298",
     url: "https://iedm.com/products/deep-jungle-mens-t-shirt"
+  },
+
+  {
+    name: "Reyes Pine",
+    category: "Bath Rugs",
+    description: "The statement piece of this edit — a deep pine-green bath rug rich enough to build a whole room around.",
+    price: 88.00,
+    priceOriginal: 135.00,
+    url: "https://quiettownhome.com/products/reyes-pine"
+  },
+
+  {
+    name: "Sun Shower Pine",
+    category: "Shower Curtains",
+    description: "A deep pine-green shower curtain that turns an everyday bathroom into a jewel-toned retreat.",
+    price: 48.00,
+    url: "https://quiettownhome.com/products/sun-shower-pine"
+  },
+
+  {
+    name: "Sun Shower Olive",
+    category: "Shower Curtains",
+    description: "An olive-toned take on the Sun Shower print, rich enough to anchor a whole bathroom refresh.",
+    price: 48.00,
+    url: "https://quiettownhome.com/products/sun-shower-olive"
+  },
+
+  {
+    name: "Sun Shower 2x2 in Olive",
+    category: "Shower Curtains",
+    description: "The same jewel-toned richness in a bolder checkered pattern, in a deep olive colorway.",
+    price: 58.00,
+    url: "https://quiettownhome.com/products/sun-shower-2x2-olive"
+  },
+
+  {
+    name: "Alex Mill x Quiet Town Perfect Weekender Tote",
+    category: "Bags",
+    description: "A collaboration weekender tote from Quiet Town's Upcycled Collection, made with Alex Mill.",
+    price: 275.00,
+    url: "https://quiettownhome.com/products/alex-mill-x-quiet-town-perfect-weekender-tote"
   },
 
   {
