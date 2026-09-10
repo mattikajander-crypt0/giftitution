@@ -77,6 +77,13 @@ const products = [
     amazon: "https://amzn.to/4hX38LM"
   },
   {
+    name: "WRAPAHOLIC Colorful Foil Birthday Mini Rolls",
+    category: "Kids' Gift Wrapping",
+    description: "A set of 3 mini foil rolls in bright birthday colors, perfect for smaller gifts and party favors.",
+    image: "https://m.media-amazon.com/images/I/71c3m19OUSL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4dswVIY"
+  },
+  {
     name: "Disney Mickey Mouse Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "Hallmark Disney Mickey Mouse mini rolls for fun kids' birthday gifts.",
@@ -126,6 +133,13 @@ const products = [
     amazon: "https://amzn.to/4gYmcbs"
   },
   {
+    name: "Jillson Roberts Dance Party Bulk Gift Wrap",
+    category: "Kids' Gift Wrapping",
+    description: "A colorful dance-party print on a bulk roll, perfect for wrapping a whole stack of birthday gifts.",
+    image: "https://m.media-amazon.com/images/I/91A-fEiCerL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4hjod22"
+  },
+  {
     name: "Gold Star Wrapping Paper",
     category: "Kids' Gift Wrapping",
     description: "A festive gold star design that works beautifully for birthdays and celebrations.",
@@ -138,5 +152,40 @@ const products = [
     description: "Hallmark Disney Princess wrapping paper for magical birthdays and special gifts.",
     image: "https://m.media-amazon.com/images/P/B0C47C29CQ.01.LZZZZZZZ.jpg",
     amazon: "https://amzn.to/3ULVKJr"
+  },
+  {
+    name: "Pull Bows for Gift Wrapping, 24 Colors",
+    category: "Ribbon & Bows",
+    description: "A 48-piece pull-bow set in 24 bright colors — an instant finishing touch for any wrapped gift.",
+    image: "https://m.media-amazon.com/images/I/812t8YtOYIL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4dswyhy"
+  },
+  {
+    name: "Rainbow Satin Ribbon Set, 20 Colors",
+    category: "Ribbon & Bows",
+    description: "A 20-color satin ribbon set with 100 yards total, ready for a whole season of colorful bows.",
+    image: "https://m.media-amazon.com/images/I/81rlkc6o8FL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4yvnVLo"
+  },
+  {
+    name: "Rainbow Curling Ribbon for Balloons & Bows",
+    category: "Ribbon & Bows",
+    description: "Shiny rainbow curling ribbon for bows, balloons and playful finishing touches.",
+    image: "https://m.media-amazon.com/images/I/81Msi5f++AL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4gXldab"
+  },
+  {
+    name: "Jillson Roberts Satin Ribbon Assortment",
+    category: "Ribbon & Bows",
+    description: "A bold and bright double-faced satin ribbon assortment for finishing off birthday and celebration gifts.",
+    image: "https://m.media-amazon.com/images/I/71hZ4xVPSCL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4xkiA8N"
+  },
+  {
+    name: "Moss Green Curly Bows for Gift Wrapping",
+    category: "Ribbon & Bows",
+    description: "Self-adhesive curly bows in a soft moss green, a pretty finishing touch for any wrapped gift.",
+    image: "https://m.media-amazon.com/images/I/81PSdp+hXZL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4gUGr8H"
   }
 ];
