@@ -46,6 +46,50 @@ const products = [
     price: 54.95,
     image: "https://thebrobasket.com/cdn/shop/files/Ultimate-Candy-brobox-main-edits-5-7-25.png?v=1751402929&width=2048",
     url: "https://thebrobasket.com/products/the-ultra-candy-brobox"
+  },
+
+  {
+    name: "Still the Hottest Happy Anniversary Risograph Card",
+    category: "Cards & Paper",
+    description: "A cheeky risograph anniversary card printed in bold, saturated color.",
+    price: 5.95,
+    image: "https://yellowowlworkshop.com/cdn/shop/products/still-the-hottest-happy-anniversary-risograph-card-159743_2048x.jpg?v=1698253061",
+    url: "https://yellowowlworkshop.com/products/still-the-hottest-happy-anniversary-risograph-card"
+  },
+
+  {
+    name: "You Light the Stars Risograph Card",
+    category: "Cards & Paper",
+    description: "A warm, colorful risograph card for anniversaries, birthdays or just because.",
+    price: 5.95,
+    image: "https://yellowowlworkshop.com/cdn/shop/products/you-light-the-stars-risograph-card-900559_2048x.jpg?v=1698253200",
+    url: "https://yellowowlworkshop.com/products/risograph-card-you-light-the-stars"
+  },
+
+  {
+    name: "Custom 3D Miniature — Full Body",
+    category: "Photo Gifts",
+    description: "A full-body 3D printed miniature crafted from a favorite photo — a unique keepsake gift.",
+    price: 179.99,
+    image: "https://images2.productserve.com/?w=800&h=800&bg=white&trim=5&t=letterbox&url=ssl%3Awww.canvaschamp.com%2Fstatic%2Fimages%2Flandingpage%2Fminiature-full-body%2Fslider2.jpg&feedId=114164&k=2f5aa98789fa5dc170a7b18b9200a64bd2c95920",
+    url: "https://www.canvaschamp.com/custom-3d-miniature-full-body"
+  },
+
+  {
+    name: "Custom Flip Flops",
+    category: "Photo Gifts",
+    description: "Personalized flip flops printed with a favorite photo or design — a fun summer gift.",
+    price: 21.76,
+    image: "https://images2.productserve.com/?w=800&h=800&bg=white&trim=5&t=letterbox&url=ssl%3Awww.canvaschamp.ca%2Fmedia%2Fseo%2F1-custom-flip-flops-au-ca-nz.png&feedId=114164&k=123c271c0e0b9fc894dc248511d64ed4537117bc",
+    url: "https://www.canvaschamp.com/custom-flip-flops"
+  },
+
+  {
+    name: "Custom Neon Signs",
+    category: "Home Décor",
+    description: "A custom-designed neon wall sign, made to order — starting price shown, larger sizes available.",
+    price: 27.99,
+    url: "https://www.canvaschamp.com/custom-neon-signs"
   }
 
 ];

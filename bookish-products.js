@@ -142,6 +142,14 @@ const products = [
     description: "A vintage metal sword bookmark with crystal charms, inspired by fantasy adventure reads.",
     image: "https://m.media-amazon.com/images/I/61buX8ySLsL._AC_SL1500_.jpg",
     amazon: "https://amzn.to/4xBP1Au"
+  },
+
+  {
+    name: "Pride & Prejudice Hairpin",
+    category: "Bookish Jewelry",
+    description: "A gold cloisonné enamel hairpin inspired by Jane Austen's Pride & Prejudice.",
+    image: "https://yellowowlworkshop.com/cdn/shop/files/pride-prejudice-hair-pin-gold-cloisonne-enamel_2048x.jpg?v=1780492731",
+    url: "https://yellowowlworkshop.com/products/pride-prejudice-hairpin"
   }
 
 ];

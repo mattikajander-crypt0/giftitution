@@ -70,32 +70,37 @@
     Gift ideas for partners, moms, sisters and friends — beautiful,
     mostly $10–$40 finds that feel personal, not generic.
   </p>
+
+  <a class="button" href="#collections">
+    Explore the collection
+  </a>
 </section>
 
 
-<section class="section">
+<section id="collections" class="section">
 
-  <div class="coming-soon-hero">
-    <div class="coming-soon-icon" aria-hidden="true">💐</div>
-    <h2>Our Gifts-for-Her Edit Is Coming Soon</h2>
-    <p>
-      We're curating gift ideas for girlfriends, wives, moms and friends —
-      beautiful jewelry, home finds, self-care picks and a few unexpected
-      surprises, all chosen with the same "would we actually give this"
-      standard as the rest of Giftitution.
+  <div class="heading">
+
+    <p class="eyebrow">
+      THE GIFTS-FOR-HER EDIT
     </p>
 
-    <div class="notify-box">
-      <p>
-        This collection is being built right now. In the meantime, explore
-        our live collections below.
-      </p>
-      <div class="explore-links">
-        <a class="button" href="/gift-wrapping">Shop Gift Wrapping</a>
-        <a class="button secondary" href="/usa">Shop American-Themed Finds</a>
-      </div>
-    </div>
+    <h2>
+      8 Gifts for Her
+    </h2>
+
+    <p>
+      Playful cards, jewelry and personalized photo gifts, plus a couple of
+      statement roses for anyone who loves a little more romance.
+    </p>
+
   </div>
+
+  <p class="disclosure-top">
+    Disclosure: This page contains affiliate links. Giftitution may earn a commission on qualifying purchases, at no extra cost to you.
+  </p>
+
+  <div class="grid" id="products"></div>
 
 </section>
 
@@ -116,10 +121,6 @@
     <strong>Affiliate Disclosure:</strong><br>
     Some links on this site are affiliate links, which means we may earn
     a commission if you make a purchase through them, at no extra cost to you.
-  </p>
-
-  <p class="disclosure">
-    <strong>As an Amazon Associate I earn from qualifying purchases.</strong>
   </p>
 
 </section>
@@ -148,19 +149,19 @@
       <a href="/color-lovers-gifts">Color Lovers Gifts</a>
       <a href="/best-for-kids">Best for Kids</a>
       <a href="/gifts-for-him">Gifts for Him</a>
+      <a href="/gifts-for-her">Gifts for Her</a>
+      <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
       <h4>More Collections</h4>
       <a href="/gifts-under-25">Gifts Under $25</a>
-      <a href="/gifts-for-her">Gifts for Her</a>
       <a href="/unique-gift-ideas">Unique Gift Ideas</a>
     </div>
 
     <div class="footer-col">
       <h4>Coming Soon</h4>
       <a href="/stocking-stuffers">Stocking Stuffers</a>
-      <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
@@ -178,6 +179,69 @@
   </div>
 
 </footer>
+
+
+<script src="/gifts-for-her-products.js"></script>
+
+<script>
+document.getElementById("products").innerHTML = products.map((product, i) => `
+  <article class="card">
+
+    <a
+      class="product-image-link"
+      href="${product.url}"
+      target="_blank"
+      rel="sponsored noopener"
+      aria-label="View ${product.name}"
+    >
+
+      <div class="pic">
+
+        <span class="num" aria-hidden="true">
+          ${i + 1}
+        </span>
+
+        ${product.image
+          ? `<img src="${product.image}" alt="${product.name} - Giftitution gift for her pick" loading="${i < 4 ? "eager" : "lazy"}" onerror="this.style.display='none'">`
+          : `<div class="pic-placeholder">Photo coming soon</div>`}
+
+      </div>
+
+    </a>
+
+    <div class="info">
+
+      <div class="cat">
+        ${product.category}
+      </div>
+
+      <h3>
+        ${product.name}
+      </h3>
+
+      <p class="price-row">
+        <span class="price-now">$${product.price.toFixed(2)}</span>
+      </p>
+
+      <p>
+        ${product.description}
+      </p>
+
+      <a
+        class="link"
+        href="${product.url}"
+        target="_blank"
+        rel="sponsored noopener"
+        aria-label="View ${product.name}"
+      >
+        View product →
+      </a>
+
+    </div>
+
+  </article>
+`).join("");
+</script>
 
 <script src="https://www.dwin2.com/pub.3065263.min.js"></script>
 

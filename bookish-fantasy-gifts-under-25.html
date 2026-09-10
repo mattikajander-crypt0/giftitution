@@ -90,7 +90,7 @@
     </p>
 
     <h2>
-      18 Bookish Fantasy &amp; Romantasy Gifts Under $25
+      19 Bookish Fantasy &amp; Romantasy Gifts Under $25
     </h2>
 
     <p>
@@ -162,19 +162,19 @@
       <a href="/color-lovers-gifts">Color Lovers Gifts</a>
       <a href="/best-for-kids">Best for Kids</a>
       <a href="/gifts-for-him">Gifts for Him</a>
+      <a href="/gifts-for-her">Gifts for Her</a>
+      <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
       <h4>More Collections</h4>
       <a href="/gifts-under-25">Gifts Under $25</a>
-      <a href="/gifts-for-her">Gifts for Her</a>
       <a href="/unique-gift-ideas">Unique Gift Ideas</a>
     </div>
 
     <div class="footer-col">
       <h4>Coming Soon</h4>
       <a href="/stocking-stuffers">Stocking Stuffers</a>
-      <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
@@ -202,10 +202,10 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
 
     <a
       class="product-image-link"
-      href="${product.amazon}"
+      href="${product.amazon || product.url}"
       target="_blank"
       rel="sponsored noopener"
-      aria-label="View ${product.name} on Amazon"
+      aria-label="View ${product.name}"
     >
 
       <div class="pic">
@@ -241,10 +241,10 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
 
       <a
         class="link"
-        href="${product.amazon}"
+        href="${product.amazon || product.url}"
         target="_blank"
         rel="sponsored noopener"
-        aria-label="View ${product.name} on Amazon"
+        aria-label="View ${product.name}"
       >
         View product →
       </a>

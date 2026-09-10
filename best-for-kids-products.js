@@ -34,6 +34,15 @@ const products = [
     price: 39.90,
     image: "https://cdn-media.monbento.com/media/catalog/product/cache/3bfe1db7015bfa8120253281efe8d89d/e/x/explorer-infinityblue-44420060-ouvert-picto_1.png",
     url: "https://en.monbento.com/kids-insulated-backpack-explorer-blue-infinity"
+  },
+
+  {
+    name: "Custom Photo Pillows",
+    category: "Photo Gifts",
+    description: "Upload a favorite photo to create a custom-printed pillow — a cozy, personal keepsake gift.",
+    price: 8.61,
+    image: "https://images2.productserve.com/?w=800&h=800&bg=white&trim=5&t=letterbox&url=ssl%3Awww.canvaschamp.com%2Fmedia%2Fseo%2Fbaby-photo-pillow.jpg&feedId=114164&k=479a7ac730cf11deb7135e0011d71f9f4abc3504",
+    url: "https://www.canvaschamp.com/photo-pillows"
   }
 
 ];

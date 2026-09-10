@@ -93,7 +93,7 @@
     </p>
 
     <h2>
-      20 American-Themed Gifts & Finds
+      22 American-Themed Gifts & Finds
     </h2>
 
     <p>
@@ -164,19 +164,19 @@
       <a href="/color-lovers-gifts">Color Lovers Gifts</a>
       <a href="/best-for-kids">Best for Kids</a>
       <a href="/gifts-for-him">Gifts for Him</a>
+      <a href="/gifts-for-her">Gifts for Her</a>
+      <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
       <h4>More Collections</h4>
       <a href="/gifts-under-25">Gifts Under $25</a>
-      <a href="/gifts-for-her">Gifts for Her</a>
       <a href="/unique-gift-ideas">Unique Gift Ideas</a>
     </div>
 
     <div class="footer-col">
       <h4>Coming Soon</h4>
       <a href="/stocking-stuffers">Stocking Stuffers</a>
-      <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
@@ -204,10 +204,10 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
 
     <a
       class="product-image-link"
-      href="${product.amazon}"
+      href="${product.amazon || product.url}"
       target="_blank"
       rel="sponsored noopener"
-      aria-label="View ${product.name} on Amazon"
+      aria-label="View ${product.name}"
     >
 
       <div class="pic">
@@ -216,12 +216,9 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
           ${i + 1}
         </span>
 
-        <img
-          src="${product.image}"
-          alt="${product.name} - Giftitution American-themed gift pick"
-          loading="${i < 4 ? "eager" : "lazy"}"
-          onerror="this.style.display='none'"
-        >
+        ${product.image
+          ? `<img src="${product.image}" alt="${product.name} - Giftitution American-themed gift pick" loading="${i < 4 ? "eager" : "lazy"}" onerror="this.style.display='none'">`
+          : `<div class="pic-placeholder">Photo coming soon</div>`}
 
       </div>
 
@@ -237,16 +234,18 @@ document.getElementById("products").innerHTML = products.map((product, i) => `
         ${product.name}
       </h3>
 
+      ${product.price ? `<p class="price-row"><span class="price-now">$${product.price.toFixed(2)}</span></p>` : ""}
+
       <p>
         ${product.description}
       </p>
 
       <a
         class="link"
-        href="${product.amazon}"
+        href="${product.amazon || product.url}"
         target="_blank"
         rel="sponsored noopener"
-        aria-label="View ${product.name} on Amazon"
+        aria-label="View ${product.name}"
       >
         View product →
       </a>

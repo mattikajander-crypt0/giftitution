@@ -158,6 +158,22 @@ const products = [
     description: "A commemorative America 250 gift celebrating the 1776–2026 milestone and American history.",
     image: "https://m.media-amazon.com/images/I/71UQXCPqo2L._AC_SL1500_.jpg",
     amazon: "https://amzn.to/3UKESCU"
+  },
+
+  {
+    name: "Personalized Military Photo Rose",
+    category: "Preserved Roses",
+    description: "An 11\" American Liberty rose preserved in lacquer and trimmed in 24k gold, with the flag's stars and stripes on the petals and a personalized military photo.",
+    price: 143.95,
+    url: "https://www.loveisarose.com/11MRPSB.html"
+  },
+
+  {
+    name: "Illuminated 24k Gold American Liberty Rose in 5\" Vase",
+    category: "Preserved Roses",
+    description: "An 11\" real American Liberty rose preserved forever in 24k gold, set in a 5\" crystal vase with the flag's stars and stripes on the petals.",
+    price: 129.95,
+    url: "https://www.loveisarose.com/11GALRI5CCV.html"
   }
 
 ];
