@@ -122,6 +122,15 @@ const products = [
   },
 
   {
+    name: "Hipiwe Vintage Jewelry Box, Antique Green",
+    category: "Jewelry Organizers",
+    description: "An antique-green oval trinket box with a vintage floral design, for rings and small jewelry.",
+    price: 11.20,
+    image: "https://m.media-amazon.com/images/I/81yNM3ub0eL._AC_SL1500_.jpg",
+    url: "https://amzn.to/4iroDVo"
+  },
+
+  {
     name: "Reyes Pine",
     category: "Bath Rugs",
     description: "The statement piece of this edit — a deep pine-green bath rug rich enough to build a whole room around.",

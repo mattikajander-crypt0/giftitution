@@ -70,32 +70,37 @@
     Unusual, one-of-a-kind finds for the person who has everything —
     the collection that best fits Giftitution's curated, beautiful-finds spirit.
   </p>
+
+  <a class="button" href="#collections">
+    Explore the collection
+  </a>
 </section>
 
 
-<section class="section">
+<section id="collections" class="section">
 
-  <div class="coming-soon-hero">
-    <div class="coming-soon-icon" aria-hidden="true">✨</div>
-    <h2>Our Unique Gift Ideas Edit Is Coming Soon</h2>
-    <p>
-      This is the collection for the person who already has everything —
-      conversation-starters, clever novelty finds and beautifully designed
-      objects you won't see in every other gift guide. Distinctly
-      Giftitution: curated, not random.
+  <div class="heading">
+
+    <p class="eyebrow">
+      THE UNIQUE GIFT IDEAS EDIT
     </p>
 
-    <div class="notify-box">
-      <p>
-        This collection is being built right now. In the meantime, explore
-        our live collections below.
-      </p>
-      <div class="explore-links">
-        <a class="button" href="/gift-wrapping">Shop Gift Wrapping</a>
-        <a class="button secondary" href="/usa">Shop American-Themed Finds</a>
-      </div>
-    </div>
+    <h2>
+      2 Unique Gift Ideas
+    </h2>
+
+    <p>
+      Decorative trinket boxes with a distinctive look — small gifts that
+      still feel like a find.
+    </p>
+
   </div>
+
+  <p class="disclosure-top">
+    Disclosure: This page contains affiliate links. As an Amazon Associate, Giftitution earns from qualifying purchases, at no extra cost to you.
+  </p>
+
+  <div class="grid" id="products"></div>
 
 </section>
 
@@ -149,13 +154,14 @@
       <a href="/best-for-kids">Best for Kids</a>
       <a href="/gifts-for-him">Gifts for Him</a>
       <a href="/gifts-for-her">Gifts for Her</a>
+      <a href="/matte-black-gifts">Matte Black Gifts</a>
+      <a href="/unique-gift-ideas">Unique Gift Ideas</a>
       <a href="/christmas-gifts">Christmas Gifts</a>
     </div>
 
     <div class="footer-col">
       <h4>More Collections</h4>
       <a href="/gifts-under-25">Gifts Under $25</a>
-      <a href="/unique-gift-ideas">Unique Gift Ideas</a>
     </div>
 
     <div class="footer-col">
@@ -178,6 +184,72 @@
   </div>
 
 </footer>
+
+
+<script src="/unique-gift-ideas-products.js"></script>
+
+<script>
+document.getElementById("products").innerHTML = products.map((product, i) => `
+  <article class="card">
+
+    <a
+      class="product-image-link"
+      href="${product.amazon}"
+      target="_blank"
+      rel="sponsored noopener"
+      aria-label="View ${product.name} on Amazon"
+    >
+
+      <div class="pic">
+
+        <span class="num" aria-hidden="true">
+          ${i + 1}
+        </span>
+
+        <img
+          src="${product.image}"
+          alt="${product.name} - Giftitution unique gift pick"
+          loading="eager"
+          onerror="this.style.display='none'"
+        >
+
+      </div>
+
+    </a>
+
+    <div class="info">
+
+      <div class="cat">
+        ${product.category}
+      </div>
+
+      <h3>
+        ${product.name}
+      </h3>
+
+      <p class="price-row">
+        <span class="price-now">$${product.price.toFixed(2)}</span>
+      </p>
+
+      <p>
+        ${product.description}
+      </p>
+
+      <a
+        class="link"
+        href="${product.amazon}"
+        target="_blank"
+        rel="sponsored noopener"
+        aria-label="View ${product.name} on Amazon"
+      >
+        View product →
+      </a>
+
+    </div>
+
+  </article>
+`).join("");
+</script>
 
 <script src="https://www.dwin2.com/pub.3065263.min.js"></script>
 
