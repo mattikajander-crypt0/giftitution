@@ -41,11 +41,11 @@ const products = [
   },
 
   {
-    name: "upsimples 8x10 Picture Frames, Set of 5",
+    name: "PEALSN 8x10 Picture Frame Set of 6, Black Woodgrain",
     category: "Wall Art",
-    description: "A gallery wall frame set in matte black, ready for photos or prints.",
-    image: "https://m.media-amazon.com/images/I/711RfPfIRCL._AC_SL1500_.jpg",
-    amazon: "https://amzn.to/4cK1XvP"
+    description: "A gallery wall or tabletop frame set in a black woodgrain finish, ready for photos or prints.",
+    image: "https://m.media-amazon.com/images/I/71G3Es3bCgL._AC_SL1500_.jpg",
+    amazon: "https://amzn.to/4j6uyz8"
   },
 
   {
